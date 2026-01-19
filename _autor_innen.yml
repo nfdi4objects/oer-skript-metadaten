@@ -1,0 +1,28 @@
+# Metadaten zu Urheber:innen des OER-Bausteins und weiteren Beitragenden
+# Erforderlich sind Vorname (given) und Nachname (family). Die anderen Angaben sind optional.
+# Weitere Optionen zu Autor:innen-Angaben und Rollen in der Quarto-Dokumentation:
+# Autor:innen: https://quarto.org/docs/authoring/front-matter.html#author
+# Rollen: https://quarto.org/docs/journals/authors.html#roles
+author: 
+  - name:
+      given: Kai-Christian
+      family: Bruhn
+    orcid: 0000-0001-8322-1260
+    email: kai-christian.bruhn@hs-mainz.de
+    affiliation: 
+      - name: Hochschule Mainz
+        city: Mainz
+        url: https://www.hs-mainz.de/
+    role: "writing – original draft"
+  - name:
+      given: Sandra
+      family: Schröer-Spang
+    orcid: 0000-0002-3100-6240
+    email: sandra.schroeer@hs-mainz.de
+    affiliation: 
+      - name: Hochschule Mainz
+        city: Mainz
+        url: https://www.hs-mainz.de/
+    attributes:
+      corresponding: true
+    role: "writing – review & editing"

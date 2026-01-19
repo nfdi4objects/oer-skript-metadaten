@@ -1,0 +1,288 @@
+---
+title: "Einführung in Metadaten"
+subtitle: "Untertitel des OER-Skripts"
+lang: de
+date: 2025-09-16
+date-format: "DD.MM.YYYY"
+date-modified: last-modified
+metadata-files:
+  - _layout.yml
+  - _autor_innen.yml
+  - _oer_metadata.yml
+# Optional
+bibliography: bibliographie.bib
+toc: true
+toc-expand: true
+toc-title: |
+  ![](img/n4o_oer_hsm_titelgraphik.png)
+toc-location: right
+number-sections: true # Auf false setzen, wenn keine automatische Abschnittsnummerierung gewünscht
+lightbox: true
+crossref: 
+  lof-title: "Liste der Abbildungen"
+# Für CI-build in github
+execute:
+  freeze: auto
+---
+
+## Einleitung
+
+Metadaten sind Daten über Daten. Sie beschreiben einen Datensatz oder einzelne Teile davon, sodass sowohl **Menschen** als auch **Maschinen** ihn verstehen können. Dies ist insbesondere dann relevant, wenn man selbst oder andere die Daten (in anderen Kontexten) wiederverwenden möchten. Metadaten gehören damit zu den Grundlagen für wissenschaftliches Arbeiten.
+
+### Lernziele {.kolophon .unnumbered .unlisted}
+
+Die Zielgruppe dieser Einheit sind Studierende (BA und MA) und Promovierende in Fächern, die sich mit dem materiellen Erbe der Menschheitsgeschichte beschäftigen. Die fachspezifischen Beispieldaten sind an dieser Zielgruppe orientiert.
+
+Die Lernenden werden zu folgenden Lernzielen nach @petersen2023 befähigt:
+
+-   den Begriff *Metadaten* zu erläutern (LZ-ID 03_002_0626),
+-   die Relevanz von Metadaten zu erläutern (LZ-ID 03_002_0629),
+-   verschiedene Arten von Metadaten zu benennen (LZ-ID 03_002_0627),
+-   die FAIR-Prinzipien zu benennen (LZ-ID 01_007_0117).
+
+### Vorwissen {.kolophon .unnumbered .unlisted}
+
+Es wird kein spezielles Vorwissen vorausgesetzt.
+
+## Was sind Metadaten und wofür brauche ich sie
+
+Metadaten beschreiben den Inhalt, die Entstehung und den Kontext von Daten. Sie ermöglichen es, Informationen zu finden, zu veröffentlichen und wiederzuverwenden. Sie helfen dabei, Forschungsergebnisse einzuordnen, transparent und nachvollziehbar zu machen.
+
+Warum Metadaten essenziell sind für das Verstehen und Benutzen von Daten, lässt sich an folgenden Beispielen verdeutlichen:
+
+::::: panel-tabset
+## Bild
+
+**Szenario 1:** Stellen Sie sich vor, Sie stoßen in alten Aufzeichnungen auf diesen Scan eines Grundrisses. Der Scan trägt noch den Namen, den der Scanner automatisch vergeben hatte, und Sie haben damals vergessen, sich Notizen zu dem Scan oder dem abgebildeten Objekt zu machen. Möglicherweise erinnern Sie sich noch daran, was der Plan zeigt, aber werden Sie sich noch daran erinnern, aus welcher Publikation er stammt, wer der/die Urheberin des Plans ist? Ohne diese Angaben können Sie den Scan nicht weiter verwenden.
+
+![LR4T200909111246](img/01_was-sind-metadaten_11th_century_Kasivisvesvara_temple_plan__Lakkundi_Karnataka.jpg){fig-alt="Plan des Kasivisvesvara-Tempels, Urheberin: Sarah Welch, Quelle Wikimedia (https://en.wikipedia.org/wiki/File:11th_century_Kasivisvesvara_temple_plan,\_Lakkundi_Karnataka.jpg) Lizenz: CC0"}
+
+::: {.callout-warning icon="false" title="Bild-Metadaten" collapse="true"}
+Mögliche Metadaten, die weitere Informationen geben können (Für eine Vertiefung in Metadaten für Rasterbilder siehe das [NFDI4Objects-OER-Skript Bildmetadaten für Rastergrafiken](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-bildmetadaten-fuer-rastergrafiken) und die gleichnamige [NFDI4Objects-OER-Übung](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-bildmetadaten-fuer-rastergrafiken)):
+
+**Titel:** Plan Kasivisvesvara Temple
+
+**Urheber:in:** Sarah Welch
+
+**Erstellungsdatum:** 15 June 2021
+
+**Quelle:** Wikimedia (https://en.wikipedia.org/wiki/File:11th_century_Kasivisvesvara_temple_plan,\_Lakkundi_Karnataka.jpg)
+
+**Lizenz:** CC0
+
+**Beschreibung:** The Kasivisvesvara temple has been restored and is found in the southern part of the village Lakkundi. It is a Hindu twin temple – one for Shiva and the other for Surya. In historic texts and some inscriptions, it is called the Kavatalesvara temple. The temple's architectural plan follows the square and circle principle found in historic Sanskrit texts. The relative scale and relative dimensions in this architectural drawing are close to the actual but neither exact nor complete. The plan illustrates the design and layout, but some intricate details or parts of the temple may not be shown. In cases where exact measurements were not feasible, the drawing uses best approximations and rounds the best measurements feasible. This drawing uses some of the measurements made and published by Mysore Archaeological Department before 1915.
+
+**Format**: JPG
+:::
+
+## Tabelle
+
+**Szenario 2**: Sie übernehmen ein Projekt, in dem schon Vorarbeiten geleistet wurden. In den Unterlagen finden Sie eine Tabelle, für die es keine Angaben zu Inhalt, Autor:innen oder eine Beschreibung der Abkürzungen gibt. Sie müssen entweder viel Zeit darauf verwenden, die fehlenden Informationen einzuholen, oder Sie werden die Daten nicht weiter verwenden können.
+
+![Tabelle Funde](img/02_Beipieltabelle.jpg){fig-alt="Screenshot einer Tabelle, Urheberin: Sandra Schröer-Spang, Lizenz: CC0"}
+
+::: {.callout-warning icon="false" title="Tabellen-Metadaten" collapse="true"}
+Mögliche Metadaten, die weitere Informationen geben können (für eine Vertiefung in Metadaten für Tabellendaten siehe auch das [NFDI4Objects-OER-Skript Tabellendaten](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten) und die [NFDI4Objects-OER-Übung Metadatenmanipulation in Tabellenprogrammen](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-uebung-metadatenmanipulation-in-tabellenprogrammen)):
+
+**Titel**: Beispieltabelle Limesfunde
+
+**Autorin**: Sandra Schröer-Spang
+
+**Beschreibung**: Die Tabelle wurde als Beispiel für eine Tabelle ohne Metadaten erstellt. Sie enthält Funde aus baden-württembergischen Limesstandorten, die im Limesmuseum Aalen aufbewahrt werden. Die hier eingetragenen Informationen wurden exemplarisch aus der Webseite https://www.limesmuseum.de exzerptiert.
+
+**Quelle**: <https://www.limesmuseum.de>
+
+**Variablen**:
+
+-   *ID* - Einzigartige numerische Kennung eines jeden Eintrags
+-   *BL* - Kürzel für das Bundesland, in dem der Fundort liegt (BW = Baden-Württemberg)
+-   *LK* - Kürzel für den Landkreis, in dem der Fundort liegt. Als Kürzel wurde das KFZ-Kennzeichen der Gebietskörperschaft gewählt (AA = Ostalbkreis, MOS = Neckar-Odenwald-Kreis, KÜN = Hohenlohekreis)
+-   *FO* - Fundort
+-   *Inv-Nr.* - Inventarnummer des Archäologischen Landesmuseums (ALM) Rastatt
+-   *Fundtyp* - Übergeordnete Bezeichnung für die Art des Objektes
+-   *Dat.* - Datierung auf Epochenebene (RKZ = Römische Kaiserzeit, FMA = Frühmittelalter)
+-   *Mat.* - Materialart (Kn = Knochen, Bz = Bronze, Ke = Keramik, Z = Ziegel)
+-   *Standort* - Standort, an dem das Objekt zum Zeitpunkt des Eintrags aufbewahrt wurde
+
+**Erstellungsdatum**: 15.09.2025
+:::
+
+## Dateistruktur
+
+**Szenario 3:** Sie stoßen in Ihrer Forschung auf eine ältere Datensammlung. Die Dateien heißen „Manuskript neu“ oder „Aufsatz“. Angaben zu Autor:in, Ort oder Methode fehlen. Die Daten sind damit praktisch unbrauchbar.
+
+![Beispiel für eine Chaotische Dateistruktur](img/Beispielbild_Dateistruktur.jpg){fig-alt="Screenshot, Urheberin: Sandra Schröer-Spang, Lizenz: CC0"}
+
+Durch eine **eindeutige Dateibenennung**, eine **sinnvolle Ordnerstruktur** und eine **README-Datei**, in der die Ordnerstruktur und das Projekt beschrieben sind, können die Daten von fremden Personen verstanden und weiter genutzt werden. Zu Dateistrukturen siehe auch das [NFDI4Objects-OER-Skript Dateiorganisation](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-dateiorganisation)
+:::::
+
+Mit gut gepflegten Metadaten wäre in allen drei Beispielen sofort klar:
+
+-   **Wer** hat die Daten erhoben?
+-   **Wann**, in **welchem Kontext** und unter **welchen Bedingungen** wurden die Daten erhoben?
+-   **Welche Lizenz** erlaubt mir die Nachnutzung?
+
+Dieses Beispiel zeigt: Metadaten sparen nicht nur anderen Zeit, sondern auch Ihnen selbst – spätestens, wenn Sie Ihre eigenen Daten nach längerer Zeit wiederverwenden möchten.
+
+Die eigenen Forschungsdaten mit Metadaten anzureichern, gehört daher zur **guten wissenschaftlichen Praxis**[^2] und sie spielen eine zentrale Rolle bei der Umsetzung der **FAIR-Prinzipien**[^3].
+
+[^2]: [Deutsche Forschungsgemeinschaft, Leitlinien zur Sicherung guter wissenschaftlicher Praxis. Kodex (Version 3, 27. Januar 2025)](https://doi.org/10.5281/zenodo.3923601)
+
+[^3]: Die FAIR-Prinzipien wurden 2016 von der [FORCE 11-Community](https://force11.org/info/the-fair-data-principles/) veröffentlicht. Anschließend wurden sie zunächst in die [Förderrichtlinien des EU-Förderprogramms Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf) und danach in den [Kodex „Leitlinien zur Sicherung guter wissenschaftlicher Praxis“ der DFG](https://zenodo.org/records/3923602) aufgenommen. Damit sind sie aus der Wissenschaftslandschaft nicht mehr wegzudenken und Teil eines jeden wissenschaftlichen Projekts. [forschungsdaten.inf: FAIReDaten](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/)
+
+::: {.callout-note title="Die FAIR-Prinzipien auf einen Blick"}
+Die sogenannten **FAIR-Prinzipien** bilden eine international anerkannte Leitlinie für den Umgang mit Forschungsdaten. Sie stehen für:
+
+-   **F**indable: Daten sollen **auffindbar** sein.
+-   **A**ccessible: Daten sollen **zugänglich** sein.
+-   **I**nteroperable: Daten sollen in unterschiedlichen Kontexten und Systemen **verarbeitet** werden können.
+-   **R**eusable: Daten sollen **wiederverwendbar** sein.
+
+Gut dokumentierte Metadaten sind eine zentrale Voraussetzung, um Daten gemäß diesen Prinzipien nutzbar zu machen.
+
+Mehr zu den FAIR-Prinzipien finden Sie beispielsweise bei [GoFAIR](https://www.go-fair.org/fair-principles/), [forschungsdaten.info](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/) oder in einer [Handreichung zu FAIRem Datenmanagement von NFDI4Culture](https://docs.nfdi4culture.de/ta2-fair-handreichung)
+:::
+
+## Welche Arten von Metadaten gibt es
+
+Wie am obigen Beispiel deutlich wurde, gibt es unterschiedliche Arten von Metadaten, je nach Informationsbedürfnis und Anwendungskontext. Egal ob sie ein Forschungsvorhaben in seiner Gesamtheit oder den Inhalt eines einzelnen Dokuments beschreiben, können sie sich auf folgende Aspekte beziehen (Auflistung nach IANUS[^4]):
+
+[^4]: [IANUS, FDM-Empfehlungen - Dokumentation mit Metadaten (CC BY-SA 4.0)](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/dokumentation-der-metadaten)
+
+### Typen von Metadaten
+
+::: panel-tabset
+## Deskriptiv
+<i class="bi bi-book-half" style="color:#000; margin-right:6px;"></i> **Fachlich und inhaltlich nähere Beschreibung** des Projekts, eines Objekts oder einer Methode:
+
+-   Titel eines Textes
+-   Kurzbeschreibung eines Fotos
+-   Schlagwörter
+-   Autor:innen eines Textes
+
+## Strukturell
+
+<i class="bi bi-bezier2" style="color:#000; margin-right:6px;"></i> Beschreiben den **Zusammenhang** zwischen verschiedenen Teilen von Daten:
+
+-   Angabe von referenzierten Dateien in Zeichnungen
+-   Angabe der Reihenfolge von Fotos oder zusammengehörigen Dateien
+-   Beschreibung einer Ordnerstruktur
+
+## Administrativ
+
+<i class="bi bi-badge-cc-fill" style="color:#000; margin-right:6px;"></i> **Rechtliche Metadaten** benennen Rechteinhaber, Lizenzbedingungen und Zugangsregeln:
+
+-   Quellenangaben
+-   Angabe von Lizenzen, unter der Daten genutzt werden können
+
+<i class="bi bi-clock-history" style="color:#000; margin-right:6px;"></i> **Erhaltungsbezogene Metadaten** (auch Provinzienz-Metadaten genannt) lassen die Geschichte eines digitalen Objektes, also die vorhergehenden und gegenwärtigen Zustände, nachvollziehen und beschreiben Erhaltungsmaßnahmen:
+
+-   Herkunft einer Karte
+-   Dateiversion und Angabe von Änderungen an der Ursprungsversion
+-   Konvertierungsmaßnahmen
+-   Verwendete Software, Methoden und Geräte
+-   Bearbeitungsschritte
+
+## Technisch
+
+<i class="bi bi-database-fill-gear" style="color:#000; margin-right:6px;"></i> Liefern Informationen zu **Software, Hardware und Dateiformaten**:
+
+-   Dateiformat eines Bildes
+-   Zeichenkodierung eines Textes
+-   Technische Parameter eines Messgerätes
+:::
+
+Die einzelnen Kategorien können sich überschneiden und kombiniert auftreten.
+
+::: {.callout-note collapse="true" title="Andere Unterscheidung von Metadaten bei forschungsdaten.info"}
+Eine etwas andere, jedoch ähnliche Unterscheidung von Metadaten, findet sich bei [forschungsdaten.info](https://forschungsdaten.info/themen/beschreiben-und-dokumentieren/metadaten-und-metadatenstandards/):
+
+> -   **Bibliografische Metadaten** wie Titel, Autoren, Beschreibung oder Keywords ermöglichen die Zitation von Daten und Code und helfen bei der Auffindbarkeit und thematischen Eingrenzung.
+>
+> -   **Administrative Metadaten** zu Dateitypen, Standorten, Zugriffsrechten und Lizenzen helfen bei der Verwaltung und langfristigen Erhaltung der Daten.
+>
+> -   **Prozessmetadaten** beschreiben die Schritte und Aktionen mit ihren verwendeten Methoden und Hilfsmitteln, die zur Entstehung und Verarbeitung der Daten angewendet wurden.
+>
+> -   **Inhaltsbeschreibende** bzw. **deskriptive Metadaten** können je nach Disziplin sehr unterschiedlich aufgebaut sein und geben zusätzliche Informationen zu Inhalt und Entstehung der Daten.
+:::
+
+### Metadaten auf unterschiedlichen Hierarchiebenen
+
+Metadaten kommen außerdem auf **jeder Ebene eines Projektes oder Datensatzes** zur Anwendung. Sie können sich also beziehen auf:
+
+| Hierarchie-Ebene | Beispiel |
+|------------------------------------|------------------------------------|
+| <i class="bi bi-folder" style="color:#000; margin-right:6px;"></i>Datensammlung | Der gesamte Datenbestand eines Projektes |
+| <i class="bi bi-file-earmark-post" style="color:#000; margin-right:6px;"></i>Datei | Ein Grabungsfoto oder das Manuskript zu einem Aufsatz |
+| <i class="bi bi-list-check" style="color:#000; margin-right:6px;"></i>Information | Ein Datensatz in einer Datenbank oder die Auflösung von Abkürzungen innerhalb einer Tabelle |
+
+### Metadaten für Daten, Methoden und Prozesse
+
+Weiterhin können Metadaten nicht nur Daten selbst sondern auch **angewandte Prozesse und Methoden zur Generierung der Daten** beschreiben. Dadurch wird der Entstehungsprozess von Dateien und Dateikonvoluten verständlicher und die Nutzenden bekommen Hinweise für den weiteren Umgang mit den Daten.
+
+In den IANUS-IT-Empfehlungen werden im Abschnitt [Metadaten in der Anwendung](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/metadaten-in-der-anwendung/) daher Metadaten in drei Kategorien unterschieden:
+
+| Metadaten-Kategorie | Beschreibung |
+|------------------------------------|------------------------------------|
+| <i class="bi bi-archive" style="color:#000; margin-right:6px;"></i>**Projektbezogene Metadaten** | Dokumentieren den gesamten Datenbestand eines Projektes |
+| <i class="bi bi-file-earmark-text" style="color:#000; margin-right:6px;"></i>**Dateibezogene Metadaten** | Dokumentieren einzelne Dateien |
+| <i class="bi bi-sliders2-vertical" style="color:#000; margin-right:6px;"></i>**Methodenbezogene Metadaten** | Dokumentieren angewandte Prozesse und Methoden |
+
+## Häufige Stolperfallen, wenn Metadaten fehlen
+
+Beim Arbeiten mit Daten treten in der Praxis oft typische Probleme auf, die ihre Verwendung für andere erschweren:
+
+-   **Unvollständige Angaben**: Wichtige Informationen wie Erstellungsdatum oder Autor:in fehlen.
+-   **Inkonsistente Begriffe**: Dasselbe Objekt wird mit unterschiedlichen Schlagwörtern beschrieben, was die Suche erschwert.
+-   **Fehlende Angaben zu Nutzungsrechten**: Ohne klare Hinweise zu Lizenzen ist eine Nachnutzung unsicher oder unmöglich.
+-   **Nicht standardisierte Formate**: Eigene, individuelle Kategorien erschweren die Zusammenarbeit mit anderen.
+
+::: callout-tip
+Verwenden Sie, wenn möglich, standardisierte Metadaten-Schemata (z. B. *Dublin Core*) und dokumentieren Sie Ihre Entscheidungen nachvollziehbar.
+:::
+
+## Ausblick
+
+Es gibt zahlreiche etablierte Standards und Werkzeuge, die den Umgang mit Metadaten erleichtern:
+
+-   [**Dublin Core**](https://www.dublincore.org/): Ein einfaches, weit verbreitetes Schema zur Beschreibung elektronischer und physischer Ressourcen wie Webseiten, Bilder und Videos mit 15 Metadatenelementen.
+-   [**ADeX**](https://www.landesarchaeologien.de/kommissionen/archaeologie-und-informationssysteme/projekte-8): Bundesweiter Standard für den Datenaustausch zwischen Archäologischen Landesämtern und mit anderen Fachinstitutionen.
+-   [**LIDO**](https://docs.nfdi4culture.de/lido-schulung/was-ist-lido): Ein XML-Schema zum Austausch von Metadaten zu Museums- und Sammlungsobjekten.
+-   [**CIDOC CRM**](https://cidoc-crm.org/): Eine komplexe Onthologie, die insbesondere in den Kultur- und Geschichtswissenschaften Anwendung findet.
+-   **Repositorien** wie [*Zenodo*](https://zenodo.org/), [*Propylaeum-Dok*](https://www.propylaeum.de/publizieren/propylaeum-dok) oder [*IANUS*](https://ianus-fdz.de/) verlangen strukturierte Metadaten, um Daten auffindbar und zitierbar zu machen.
+
+Für Ihre eigenen Projekte empfiehlt es sich, sich frühzeitig mit passenden Standards vertraut zu machen.
+
+## Weiterführende Quellen und Informationen {.appendix .unnumbered}
+
+Um das hier erlernte Wissen zu vertiefen, bietet sich eine [Übung zu den verschiedenen Metadatentypen](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-uebung-metadatentypen) an, die ebenfalls als NFDI4Objects-Baustein zur Verfügung steht. Zusätzlich finden Sie unter den NFDI4Objects-OER-Bausteinen außerdem Übungen zu [Normdaten](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-normdaten) und [persistenten Identifikatoren](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-pids), die eng mit dem Thema Metadaten zusammenhängen.
+
+Konkrete Beispiele für die Anwendung von Metadaten finden Sie auch in anderen N4O-OER-Bausteinen z.B. zu [Bilddaten](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-skript-bildmetadaten-fuer-rastergrafiken) oder [Tabellendaten](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten).
+
+Im World Wide Web gibt es eine Fülle an Informationen zu Metadaten und damit verbundenen Themen. Exemplarisch seien hier genannt:
+
+-   **IANUS**: In den FDM-Empfehlungen von IANUS, insbesondere den Unterkapiteln des Abschnitts zu [Dokumentation](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/index) werden die Themen Metadaten, Strukturierung von Metadaten, Kontrollierte Vokabulare, Thesauri und Normdaten, Speicherung von Metadaten und Metadaten in der Anwendung ausführlich behandelt mit Blick auf Archäologie und Altertumswissenschaften.
+
+-   **Forschungsdaten.info**: insbesondere die Abschnitte zu [Metadaten und Metadatenstandards](https://forschungsdaten.info/themen/beschreiben-und-dokumentieren/metadaten-und-metadatenstandards/), zu den [FAIR-Prinzipien](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/) und zu [Persistent Identifiers](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/persistente-identifikatoren/). Außerdem lohnt ein Blick auf die Hinweise und Empfehlungen für den [Wissenschaftsbereich Archäologie](https://forschungsdaten.info/wissenschaftsbereiche/archaeologie/)
+
+-   Die [Handreichung für ein FAIRes Management kulturwissenschaftlicher Forschungsdaten von **NFDI4Culture**](https://docs.nfdi4culture.de/ta2-fair-handreichung) behandelt die Themen FAIR-Prinzipien, Metadatenstandards, Vokabulare, Normdaten und Anwendungsontologien insbesondere für Kulturwissenschaften und enthält darüber hinaus ausführliche Linksammlungen.
+
+## Nachnutzen {.appendix .unnumbered}
+
+Alle sind herzlich eingeladen, diesen Baustein und die zugehörige Copyleft-Lizenz zu nutzen, um ihr Wissen und Expertise in die Verbesserung und Aktualisierung einzubringen. Alle können die Inhalte erweitern oder überarbeiten, zum Beispiel um Anwendungsszenarien und Nutzungskontexte zu erweitern.
+
+Unser Wunsch ist ein lebendiges, stetig wachsendes Dokument, das sich durch die Beiträge vieler verändert - im Einklang mit eines sich wandelnden Umfelds. Wir freuen uns im Falle einer Überarbeitung über eine kurze Notiz – das ist aber selbstverständlich keine Pflicht.
+
+<!-- Verweise auf Website und Repository werden in _oer_metadata.yml global festgelegt. Wenn die OER nicht in einem git-Repository gehostet oder online bereitgestellt werden, können die folgenden zwei Zeilen gelöscht werden. -->
+
+:link: [Dieser Baustein als Website]({{< meta site-url >}}) 
+
+:link: [Quarto-Quellcode dieses Bausteins]({{< meta repo-url >}})
+
+---
+
+:link: Dieses Skript nutzt das [OER-Skript-Template von NFDI4Objects]({{< meta template-repo-url >}})
+
+## Disclaimer: Einsatz von LLM {.appendix .unnumbered}
+
+Bei der Erarbeitung dieses OER-Bausteins wurde für einzelne zielgruppengerechte Formulierungshilfen ChatGPT 5.0 genutzt.
