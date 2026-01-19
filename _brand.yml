@@ -134,14 +134,14 @@ defaults:
       nav-link-font-size: 1.2rem
       nav-link-font-weight: 400
       nav-link-color: $brand-text
-      nav-tabs-border-color: $brand-hintergrund
-      nav-tabs-border-width: 3px
-      nav-tabs-border-radius: 5px
-      nav-tabs-link-hover-border-color: $brand-hintergrund
+      nav-tabs-border-color: $brand-akzent
+      nav-tabs-border-width: 1px
+      nav-tabs-border-radius: 2px
+      nav-tabs-link-hover-border-color: $brand-akzent
       nav-tabs-link-active-color: $brand-text
       nav-tabs-link-active-bg: $brand-hintergrund
-      nav-tabs-link-active-border-color: $brand-hintergrund
-      nav-pills-border-radius: 5px
+      nav-tabs-link-active-border-color: $brand-akzent
+      nav-pills-border-radius: 1px
       nav-pills-link-active-color: $brand-text
       nav-pills-link-active-bg: $brand-hintergrund
       nav-underline-gap: 1rem

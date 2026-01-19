@@ -128,7 +128,7 @@ Die eigenen Forschungsdaten mit Metadaten anzureichern, gehört daher zur **gute
 
 [^2]: [Deutsche Forschungsgemeinschaft, Leitlinien zur Sicherung guter wissenschaftlicher Praxis. Kodex (Version 3, 27. Januar 2025)](https://doi.org/10.5281/zenodo.3923601)
 
-[^3]: Die FAIR-Prinzipien wurden 2016 von der [FORCE 11-Community](https://force11.org/info/the-fair-data-principles/) veröffentlicht. Anschließend wurden sie zunächst in die [Förderrichtlinien des EU-Förderprogramms Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf) und danach in den [Kodex „Leitlinien zur Sicherung guter wissenschaftlicher Praxis“ der DFG](https://zenodo.org/records/3923602) aufgenommen. Damit sind sie aus der Wissenschaftslandschaft nicht mehr wegzudenken und Teil eines jeden wissenschaftlichen Projekts. [forschungsdaten.inf: FAIReDaten](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/)
+[^3]: Die FAIR-Prinzipien wurden 2016 von der [FORCE 11-Community](https://force11.org/info/the-fair-data-principles/) veröffentlicht. Anschließend wurden sie zunächst in die [Förderrichtlinien des EU-Förderprogramms Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf) und danach in den [Kodex „Leitlinien zur Sicherung guter wissenschaftlicher Praxis“ der DFG](https://zenodo.org/records/3923602) aufgenommen. Damit sind sie aus der Wissenschaftslandschaft nicht mehr wegzudenken und Teil eines jeden wissenschaftlichen Projekts. [forschungsdaten.info: FAIReDaten](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/)
 
 ::: {.callout-note title="Die FAIR-Prinzipien auf einen Blick"}
 Die sogenannten **FAIR-Prinzipien** bilden eine international anerkannte Leitlinie für den Umgang mit Forschungsdaten. Sie stehen für:
@@ -197,13 +197,10 @@ Die einzelnen Kategorien können sich überschneiden und kombiniert auftreten.
 ::: {.callout-note collapse="true" title="Andere Unterscheidung von Metadaten bei forschungsdaten.info"}
 Eine etwas andere, jedoch ähnliche Unterscheidung von Metadaten, findet sich bei [forschungsdaten.info](https://forschungsdaten.info/themen/beschreiben-und-dokumentieren/metadaten-und-metadatenstandards/):
 
-> -   **Bibliografische Metadaten** wie Titel, Autoren, Beschreibung oder Keywords ermöglichen die Zitation von Daten und Code und helfen bei der Auffindbarkeit und thematischen Eingrenzung.
->
-> -   **Administrative Metadaten** zu Dateitypen, Standorten, Zugriffsrechten und Lizenzen helfen bei der Verwaltung und langfristigen Erhaltung der Daten.
->
-> -   **Prozessmetadaten** beschreiben die Schritte und Aktionen mit ihren verwendeten Methoden und Hilfsmitteln, die zur Entstehung und Verarbeitung der Daten angewendet wurden.
->
-> -   **Inhaltsbeschreibende** bzw. **deskriptive Metadaten** können je nach Disziplin sehr unterschiedlich aufgebaut sein und geben zusätzliche Informationen zu Inhalt und Entstehung der Daten.
+-   **Bibliografische Metadaten** wie Titel, Autoren, Beschreibung oder Keywords ermöglichen die Zitation von Daten und Code und helfen bei der Auffindbarkeit und thematischen Eingrenzung.
+-   **Administrative Metadaten** zu Dateitypen, Standorten, Zugriffsrechten und Lizenzen helfen bei der Verwaltung und langfristigen Erhaltung der Daten.
+-   **Prozessmetadaten** beschreiben die Schritte und Aktionen mit ihren verwendeten Methoden und Hilfsmitteln, die zur Entstehung und Verarbeitung der Daten angewendet wurden.
+-   **Inhaltsbeschreibende** bzw. **deskriptive Metadaten** können je nach Disziplin sehr unterschiedlich aufgebaut sein und geben zusätzliche Informationen zu Inhalt und Entstehung der Daten.
 :::
 
 ### Metadaten auf unterschiedlichen Hierarchiebenen
