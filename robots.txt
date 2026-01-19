@@ -1,0 +1,1 @@
+Sitemap: https://nfdi4objects.github.io/oer-skript-metadaten/sitemap.xml

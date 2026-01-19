@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kai-Christian Bruhn">
+<meta name="author" content="Sandra Schröer-Spang">
+<meta name="keywords" content="Metadaten, Forschungsdatenmanagement">
+<meta name="description" content="OER-Baustein zur Einführung in das Thema Metadaten">
+
+<title>Einführung in Metadaten</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/logos/logo_klein.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6fd48966c8828fc331a01dee056e4847.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b23d75237bcd4fdda1e412fdc3567d6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6fd48966c8828fc331a01dee056e4847.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-78f0f41827b5db3975845824f9f545ee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-78f0f41827b5db3975845824f9f545ee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-78f0f41827b5db3975845824f9f545ee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+<meta property="og:title" content="Einführung in Metadaten">
+<meta property="og:description" content="OER-Baustein zur Einführung in das Thema Metadaten">
+<meta property="og:image" content="https://nfdi4objects.github.io/oer-skript-metadaten/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:locale" content="de_DE">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title"><p><a href="img/n4o_oer_hsm_titelgraphik.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/n4o_oer_hsm_titelgraphik.png" class="img-fluid"></a></p></h2>
+   
+  <ul>
+  <li><a href="#einleitung" id="toc-einleitung" class="nav-link active" data-scroll-target="#einleitung"><span class="header-section-number">1</span> Einleitung</a></li>
+  <li><a href="#was-sind-metadaten-und-wofür-brauche-ich-sie" id="toc-was-sind-metadaten-und-wofür-brauche-ich-sie" class="nav-link" data-scroll-target="#was-sind-metadaten-und-wofür-brauche-ich-sie"><span class="header-section-number">2</span> Was sind Metadaten und wofür brauche ich sie</a></li>
+  <li><a href="#welche-arten-von-metadaten-gibt-es" id="toc-welche-arten-von-metadaten-gibt-es" class="nav-link" data-scroll-target="#welche-arten-von-metadaten-gibt-es"><span class="header-section-number">3</span> Welche Arten von Metadaten gibt es</a>
+  <ul class="collapse">
+  <li><a href="#typen-von-metadaten" id="toc-typen-von-metadaten" class="nav-link" data-scroll-target="#typen-von-metadaten"><span class="header-section-number">3.1</span> Typen von Metadaten</a></li>
+  <li><a href="#metadaten-auf-unterschiedlichen-hierarchiebenen" id="toc-metadaten-auf-unterschiedlichen-hierarchiebenen" class="nav-link" data-scroll-target="#metadaten-auf-unterschiedlichen-hierarchiebenen"><span class="header-section-number">3.2</span> Metadaten auf unterschiedlichen Hierarchiebenen</a></li>
+  <li><a href="#metadaten-für-daten-methoden-und-prozesse" id="toc-metadaten-für-daten-methoden-und-prozesse" class="nav-link" data-scroll-target="#metadaten-für-daten-methoden-und-prozesse"><span class="header-section-number">3.3</span> Metadaten für Daten, Methoden und Prozesse</a></li>
+  </ul></li>
+  <li><a href="#häufige-stolperfallen-wenn-metadaten-fehlen" id="toc-häufige-stolperfallen-wenn-metadaten-fehlen" class="nav-link" data-scroll-target="#häufige-stolperfallen-wenn-metadaten-fehlen"><span class="header-section-number">4</span> Häufige Stolperfallen, wenn Metadaten fehlen</a></li>
+  <li><a href="#ausblick" id="toc-ausblick" class="nav-link" data-scroll-target="#ausblick"><span class="header-section-number">5</span> Ausblick</a></li>
+  
+  
+  
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Einführung in Metadaten</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> qmd</button></div></div>
+<p class="subtitle lead">Untertitel des OER-Skripts</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Skript</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>OER-Baustein zur Einführung in das Thema Metadaten</p>
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Autor:innen</div>
+  <div class="quarto-title-meta-heading">Institution</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Kai-Christian Bruhn <a href="mailto:kai-christian.bruhn@hs-mainz.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-8322-1260" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.hs-mainz.de/">
+            Hochschule Mainz
+            </a>
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Sandra Schröer-Spang <a href="mailto:sandra.schroeer@hs-mainz.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-3100-6240" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.hs-mainz.de/">
+            Hochschule Mainz
+            </a>
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Veröffentlicht am</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16.09.2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Zuletzt geändert am</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">19.01.2026</p>
+    </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Doi</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/XXXXXXX.XXXXXXX">XXXXXXX.XXXXXXX</a>
+      </p>
+    </div>
+  </div>
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Zusammenfassung</div>
+    <p>In diesem Skript wird erklärt, was Metadaten sind, welche Arten von Metadaten es gibt und warum es für jede Forschungsarbeit relevant ist, Dateien, Datensätze und die Forschungsarbeit an sich mit Metadaten zu versehen. Die Zielgruppe dieser Einheit sind Studierende (BA und MA) und Promovierende in Fächern, die sich mit dem materiellen Erbe der Menschheitsgeschichte beschäftigen. Die fachspezifischen Beispieldaten sind an dieser Zielgruppe orientiert.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Stichwörter</div>
+    <p>Metadaten, Forschungsdatenmanagement</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="einleitung" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="einleitung"><span class="header-section-number">1</span> Einleitung</h2>
+<p>Metadaten sind Daten über Daten. Sie beschreiben einen Datensatz oder einzelne Teile davon, sodass sowohl <strong>Menschen</strong> als auch <strong>Maschinen</strong> ihn verstehen können. Dies ist insbesondere dann relevant, wenn man selbst oder andere die Daten (in anderen Kontexten) wiederverwenden möchten. Metadaten gehören damit zu den Grundlagen für wissenschaftliches Arbeiten.</p>
+<section id="lernziele" class="level3 kolophon unnumbered unlisted">
+<h3 class="kolophon unnumbered unlisted anchored" data-anchor-id="lernziele">Lernziele</h3>
+<p>Die Zielgruppe dieser Einheit sind Studierende (BA und MA) und Promovierende in Fächern, die sich mit dem materiellen Erbe der Menschheitsgeschichte beschäftigen. Die fachspezifischen Beispieldaten sind an dieser Zielgruppe orientiert.</p>
+<p>Die Lernenden werden zu folgenden Lernzielen nach <span class="citation" data-cites="petersen2023">Petersen <em>u.&nbsp;a.</em> (<a href="#ref-petersen2023" role="doc-biblioref">2025</a>)</span> befähigt:</p>
+<ul>
+<li>den Begriff <em>Metadaten</em> zu erläutern (LZ-ID 03_002_0626),</li>
+<li>die Relevanz von Metadaten zu erläutern (LZ-ID 03_002_0629),</li>
+<li>verschiedene Arten von Metadaten zu benennen (LZ-ID 03_002_0627),</li>
+<li>die FAIR-Prinzipien zu benennen (LZ-ID 01_007_0117).</li>
+</ul>
+</section>
+<section id="vorwissen" class="level3 kolophon unnumbered unlisted">
+<h3 class="kolophon unnumbered unlisted anchored" data-anchor-id="vorwissen">Vorwissen</h3>
+<p>Es wird kein spezielles Vorwissen vorausgesetzt.</p>
+</section>
+</section>
+<section id="was-sind-metadaten-und-wofür-brauche-ich-sie" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="was-sind-metadaten-und-wofür-brauche-ich-sie"><span class="header-section-number">2</span> Was sind Metadaten und wofür brauche ich sie</h2>
+<p>Metadaten beschreiben den Inhalt, die Entstehung und den Kontext von Daten. Sie ermöglichen es, Informationen zu finden, zu veröffentlichen und wiederzuverwenden. Sie helfen dabei, Forschungsergebnisse einzuordnen, transparent und nachvollziehbar zu machen.</p>
+<p>Warum Metadaten essenziell sind für das Verstehen und Benutzen von Daten, lässt sich an folgenden Beispielen verdeutlichen:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Bild</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Tabelle</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Dateistruktur</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>Szenario 1:</strong> Stellen Sie sich vor, Sie stoßen in alten Aufzeichnungen auf diesen Scan eines Grundrisses. Der Scan trägt noch den Namen, den der Scanner automatisch vergeben hatte, und Sie haben damals vergessen, sich Notizen zu dem Scan oder dem abgebildeten Objekt zu machen. Möglicherweise erinnern Sie sich noch daran, was der Plan zeigt, aber werden Sie sich noch daran erinnern, aus welcher Publikation er stammt, wer der/die Urheberin des Plans ist? Ohne diese Angaben können Sie den Scan nicht weiter verwenden.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/01_was-sind-metadaten_11th_century_Kasivisvesvara_temple_plan__Lakkundi_Karnataka.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="LR4T200909111246"><img src="img/01_was-sind-metadaten_11th_century_Kasivisvesvara_temple_plan__Lakkundi_Karnataka.jpg" class="img-fluid figure-img" alt="Plan des Kasivisvesvara-Tempels, Urheberin: Sarah Welch, Quelle Wikimedia (https://en.wikipedia.org/wiki/File:11th_century_Kasivisvesvara_temple_plan,_Lakkundi_Karnataka.jpg) Lizenz: CC0"></a></p>
+<figcaption>LR4T200909111246</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="Bild-Metadaten">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warnung</span>Bild-Metadaten
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Mögliche Metadaten, die weitere Informationen geben können (Für eine Vertiefung in Metadaten für Rasterbilder siehe das <a href="https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-bildmetadaten-fuer-rastergrafiken">NFDI4Objects-OER-Skript Bildmetadaten für Rastergrafiken</a> und die gleichnamige <a href="https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-bildmetadaten-fuer-rastergrafiken">NFDI4Objects-OER-Übung</a>):</p>
+<p><strong>Titel:</strong> Plan Kasivisvesvara Temple</p>
+<p><strong>Urheber:in:</strong> Sarah Welch</p>
+<p><strong>Erstellungsdatum:</strong> 15 June 2021</p>
+<p><strong>Quelle:</strong> Wikimedia (https://en.wikipedia.org/wiki/File:11th_century_Kasivisvesvara_temple_plan,_Lakkundi_Karnataka.jpg)</p>
+<p><strong>Lizenz:</strong> CC0</p>
+<p><strong>Beschreibung:</strong> The Kasivisvesvara temple has been restored and is found in the southern part of the village Lakkundi. It is a Hindu twin temple – one for Shiva and the other for Surya. In historic texts and some inscriptions, it is called the Kavatalesvara temple. The temple’s architectural plan follows the square and circle principle found in historic Sanskrit texts. The relative scale and relative dimensions in this architectural drawing are close to the actual but neither exact nor complete. The plan illustrates the design and layout, but some intricate details or parts of the temple may not be shown. In cases where exact measurements were not feasible, the drawing uses best approximations and rounds the best measurements feasible. This drawing uses some of the measurements made and published by Mysore Archaeological Department before 1915.</p>
+<p><strong>Format</strong>: JPG</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><strong>Szenario 2</strong>: Sie übernehmen ein Projekt, in dem schon Vorarbeiten geleistet wurden. In den Unterlagen finden Sie eine Tabelle, für die es keine Angaben zu Inhalt, Autor:innen oder eine Beschreibung der Abkürzungen gibt. Sie müssen entweder viel Zeit darauf verwenden, die fehlenden Informationen einzuholen, oder Sie werden die Daten nicht weiter verwenden können.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/02_Beipieltabelle.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Tabelle Funde"><img src="img/02_Beipieltabelle.jpg" class="img-fluid figure-img" alt="Screenshot einer Tabelle, Urheberin: Sandra Schröer-Spang, Lizenz: CC0"></a></p>
+<figcaption>Tabelle Funde</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning no-icon callout-titled" title="Tabellen-Metadaten">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warnung</span>Tabellen-Metadaten
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Mögliche Metadaten, die weitere Informationen geben können (für eine Vertiefung in Metadaten für Tabellendaten siehe auch das <a href="https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten">NFDI4Objects-OER-Skript Tabellendaten</a> und die <a href="https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-uebung-metadatenmanipulation-in-tabellenprogrammen">NFDI4Objects-OER-Übung Metadatenmanipulation in Tabellenprogrammen</a>):</p>
+<p><strong>Titel</strong>: Beispieltabelle Limesfunde</p>
+<p><strong>Autorin</strong>: Sandra Schröer-Spang</p>
+<p><strong>Beschreibung</strong>: Die Tabelle wurde als Beispiel für eine Tabelle ohne Metadaten erstellt. Sie enthält Funde aus baden-württembergischen Limesstandorten, die im Limesmuseum Aalen aufbewahrt werden. Die hier eingetragenen Informationen wurden exemplarisch aus der Webseite https://www.limesmuseum.de exzerptiert.</p>
+<p><strong>Quelle</strong>: <a href="https://www.limesmuseum.de" class="uri">https://www.limesmuseum.de</a></p>
+<p><strong>Variablen</strong>:</p>
+<ul>
+<li><em>ID</em> - Einzigartige numerische Kennung eines jeden Eintrags</li>
+<li><em>BL</em> - Kürzel für das Bundesland, in dem der Fundort liegt (BW = Baden-Württemberg)</li>
+<li><em>LK</em> - Kürzel für den Landkreis, in dem der Fundort liegt. Als Kürzel wurde das KFZ-Kennzeichen der Gebietskörperschaft gewählt (AA = Ostalbkreis, MOS = Neckar-Odenwald-Kreis, KÜN = Hohenlohekreis)</li>
+<li><em>FO</em> - Fundort</li>
+<li><em>Inv-Nr.</em> - Inventarnummer des Archäologischen Landesmuseums (ALM) Rastatt</li>
+<li><em>Fundtyp</em> - Übergeordnete Bezeichnung für die Art des Objektes</li>
+<li><em>Dat.</em> - Datierung auf Epochenebene (RKZ = Römische Kaiserzeit, FMA = Frühmittelalter)</li>
+<li><em>Mat.</em> - Materialart (Kn = Knochen, Bz = Bronze, Ke = Keramik, Z = Ziegel)</li>
+<li><em>Standort</em> - Standort, an dem das Objekt zum Zeitpunkt des Eintrags aufbewahrt wurde</li>
+</ul>
+<p><strong>Erstellungsdatum</strong>: 15.09.2025</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><strong>Szenario 3:</strong> Sie stoßen in Ihrer Forschung auf eine ältere Datensammlung. Die Dateien heißen „Manuskript neu“ oder „Aufsatz“. Angaben zu Autor:in, Ort oder Methode fehlen. Die Daten sind damit praktisch unbrauchbar.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/Beispielbild_Dateistruktur.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Beispiel für eine Chaotische Dateistruktur"><img src="img/Beispielbild_Dateistruktur.jpg" class="img-fluid figure-img" alt="Screenshot, Urheberin: Sandra Schröer-Spang, Lizenz: CC0"></a></p>
+<figcaption>Beispiel für eine Chaotische Dateistruktur</figcaption>
+</figure>
+</div>
+<p>Durch eine <strong>eindeutige Dateibenennung</strong>, eine <strong>sinnvolle Ordnerstruktur</strong> und eine <strong>README-Datei</strong>, in der die Ordnerstruktur und das Projekt beschrieben sind, können die Daten von fremden Personen verstanden und weiter genutzt werden. Zu Dateistrukturen siehe auch das <a href="https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-dateiorganisation">NFDI4Objects-OER-Skript Dateiorganisation</a></p>
+</div>
+</div>
+</div>
+<p>Mit gut gepflegten Metadaten wäre in allen drei Beispielen sofort klar:</p>
+<ul>
+<li><strong>Wer</strong> hat die Daten erhoben?</li>
+<li><strong>Wann</strong>, in <strong>welchem Kontext</strong> und unter <strong>welchen Bedingungen</strong> wurden die Daten erhoben?</li>
+<li><strong>Welche Lizenz</strong> erlaubt mir die Nachnutzung?</li>
+</ul>
+<p>Dieses Beispiel zeigt: Metadaten sparen nicht nur anderen Zeit, sondern auch Ihnen selbst – spätestens, wenn Sie Ihre eigenen Daten nach längerer Zeit wiederverwenden möchten.</p>
+<p>Die eigenen Forschungsdaten mit Metadaten anzureichern, gehört daher zur <strong>guten wissenschaftlichen Praxis</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> und sie spielen eine zentrale Rolle bei der Umsetzung der <strong>FAIR-Prinzipien</strong><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Die FAIR-Prinzipien auf einen Blick">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Die FAIR-Prinzipien auf einen Blick
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die sogenannten <strong>FAIR-Prinzipien</strong> bilden eine international anerkannte Leitlinie für den Umgang mit Forschungsdaten. Sie stehen für:</p>
+<ul>
+<li><strong>F</strong>indable: Daten sollen <strong>auffindbar</strong> sein.</li>
+<li><strong>A</strong>ccessible: Daten sollen <strong>zugänglich</strong> sein.</li>
+<li><strong>I</strong>nteroperable: Daten sollen in unterschiedlichen Kontexten und Systemen <strong>verarbeitet</strong> werden können.</li>
+<li><strong>R</strong>eusable: Daten sollen <strong>wiederverwendbar</strong> sein.</li>
+</ul>
+<p>Gut dokumentierte Metadaten sind eine zentrale Voraussetzung, um Daten gemäß diesen Prinzipien nutzbar zu machen.</p>
+<p>Mehr zu den FAIR-Prinzipien finden Sie beispielsweise bei <a href="https://www.go-fair.org/fair-principles/">GoFAIR</a>, <a href="https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/">forschungsdaten.info</a> oder in einer <a href="https://docs.nfdi4culture.de/ta2-fair-handreichung">Handreichung zu FAIRem Datenmanagement von NFDI4Culture</a></p>
+</div>
+</div>
+</section>
+<section id="welche-arten-von-metadaten-gibt-es" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="welche-arten-von-metadaten-gibt-es"><span class="header-section-number">3</span> Welche Arten von Metadaten gibt es</h2>
+<p>Wie am obigen Beispiel deutlich wurde, gibt es unterschiedliche Arten von Metadaten, je nach Informationsbedürfnis und Anwendungskontext. Egal ob sie ein Forschungsvorhaben in seiner Gesamtheit oder den Inhalt eines einzelnen Dokuments beschreiben, können sie sich auf folgende Aspekte beziehen (Auflistung nach IANUS<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>):</p>
+<section id="typen-von-metadaten" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="typen-von-metadaten"><span class="header-section-number">3.1</span> Typen von Metadaten</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Deskriptiv</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Strukturell</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Administrativ</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Technisch</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><i class="bi bi-book-half" style="color:#000; margin-right:6px;"></i> <strong>Fachlich und inhaltlich nähere Beschreibung</strong> des Projekts, eines Objekts oder einer Methode:</p>
+<ul>
+<li>Titel eines Textes</li>
+<li>Kurzbeschreibung eines Fotos</li>
+<li>Schlagwörter</li>
+<li>Autor:innen eines Textes</li>
+</ul>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><i class="bi bi-bezier2" style="color:#000; margin-right:6px;"></i> Beschreiben den <strong>Zusammenhang</strong> zwischen verschiedenen Teilen von Daten:</p>
+<ul>
+<li>Angabe von referenzierten Dateien in Zeichnungen</li>
+<li>Angabe der Reihenfolge von Fotos oder zusammengehörigen Dateien</li>
+<li>Beschreibung einer Ordnerstruktur</li>
+</ul>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><i class="bi bi-badge-cc-fill" style="color:#000; margin-right:6px;"></i> <strong>Rechtliche Metadaten</strong> benennen Rechteinhaber, Lizenzbedingungen und Zugangsregeln:</p>
+<ul>
+<li>Quellenangaben</li>
+<li>Angabe von Lizenzen, unter der Daten genutzt werden können</li>
+</ul>
+<p><i class="bi bi-clock-history" style="color:#000; margin-right:6px;"></i> <strong>Erhaltungsbezogene Metadaten</strong> (auch Provinzienz-Metadaten genannt) lassen die Geschichte eines digitalen Objektes, also die vorhergehenden und gegenwärtigen Zustände, nachvollziehen und beschreiben Erhaltungsmaßnahmen:</p>
+<ul>
+<li>Herkunft einer Karte</li>
+<li>Dateiversion und Angabe von Änderungen an der Ursprungsversion</li>
+<li>Konvertierungsmaßnahmen</li>
+<li>Verwendete Software, Methoden und Geräte</li>
+<li>Bearbeitungsschritte</li>
+</ul>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p><i class="bi bi-database-fill-gear" style="color:#000; margin-right:6px;"></i> Liefern Informationen zu <strong>Software, Hardware und Dateiformaten</strong>:</p>
+<ul>
+<li>Dateiformat eines Bildes</li>
+<li>Zeichenkodierung eines Textes</li>
+<li>Technische Parameter eines Messgerätes</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Die einzelnen Kategorien können sich überschneiden und kombiniert auftreten.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Andere Unterscheidung von Metadaten bei forschungsdaten.info">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Andere Unterscheidung von Metadaten bei forschungsdaten.info
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Eine etwas andere, jedoch ähnliche Unterscheidung von Metadaten, findet sich bei <a href="https://forschungsdaten.info/themen/beschreiben-und-dokumentieren/metadaten-und-metadatenstandards/">forschungsdaten.info</a>:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p><strong>Bibliografische Metadaten</strong> wie Titel, Autoren, Beschreibung oder Keywords ermöglichen die Zitation von Daten und Code und helfen bei der Auffindbarkeit und thematischen Eingrenzung.</p></li>
+<li><p><strong>Administrative Metadaten</strong> zu Dateitypen, Standorten, Zugriffsrechten und Lizenzen helfen bei der Verwaltung und langfristigen Erhaltung der Daten.</p></li>
+<li><p><strong>Prozessmetadaten</strong> beschreiben die Schritte und Aktionen mit ihren verwendeten Methoden und Hilfsmitteln, die zur Entstehung und Verarbeitung der Daten angewendet wurden.</p></li>
+<li><p><strong>Inhaltsbeschreibende</strong> bzw. <strong>deskriptive Metadaten</strong> können je nach Disziplin sehr unterschiedlich aufgebaut sein und geben zusätzliche Informationen zu Inhalt und Entstehung der Daten.</p></li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section id="metadaten-auf-unterschiedlichen-hierarchiebenen" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="metadaten-auf-unterschiedlichen-hierarchiebenen"><span class="header-section-number">3.2</span> Metadaten auf unterschiedlichen Hierarchiebenen</h3>
+<p>Metadaten kommen außerdem auf <strong>jeder Ebene eines Projektes oder Datensatzes</strong> zur Anwendung. Sie können sich also beziehen auf:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hierarchie-Ebene</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><i class="bi bi-folder" style="color:#000; margin-right:6px;"></i>Datensammlung</td>
+<td>Der gesamte Datenbestand eines Projektes</td>
+</tr>
+<tr class="even">
+<td><i class="bi bi-file-earmark-post" style="color:#000; margin-right:6px;"></i>Datei</td>
+<td>Ein Grabungsfoto oder das Manuskript zu einem Aufsatz</td>
+</tr>
+<tr class="odd">
+<td><i class="bi bi-list-check" style="color:#000; margin-right:6px;"></i>Information</td>
+<td>Ein Datensatz in einer Datenbank oder die Auflösung von Abkürzungen innerhalb einer Tabelle</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="metadaten-für-daten-methoden-und-prozesse" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="metadaten-für-daten-methoden-und-prozesse"><span class="header-section-number">3.3</span> Metadaten für Daten, Methoden und Prozesse</h3>
+<p>Weiterhin können Metadaten nicht nur Daten selbst sondern auch <strong>angewandte Prozesse und Methoden zur Generierung der Daten</strong> beschreiben. Dadurch wird der Entstehungsprozess von Dateien und Dateikonvoluten verständlicher und die Nutzenden bekommen Hinweise für den weiteren Umgang mit den Daten.</p>
+<p>In den IANUS-IT-Empfehlungen werden im Abschnitt <a href="https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/metadaten-in-der-anwendung/">Metadaten in der Anwendung</a> daher Metadaten in drei Kategorien unterschieden:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metadaten-Kategorie</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><i class="bi bi-archive" style="color:#000; margin-right:6px;"></i><strong>Projektbezogene Metadaten</strong></td>
+<td>Dokumentieren den gesamten Datenbestand eines Projektes</td>
+</tr>
+<tr class="even">
+<td><i class="bi bi-file-earmark-text" style="color:#000; margin-right:6px;"></i><strong>Dateibezogene Metadaten</strong></td>
+<td>Dokumentieren einzelne Dateien</td>
+</tr>
+<tr class="odd">
+<td><i class="bi bi-sliders2-vertical" style="color:#000; margin-right:6px;"></i><strong>Methodenbezogene Metadaten</strong></td>
+<td>Dokumentieren angewandte Prozesse und Methoden</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="häufige-stolperfallen-wenn-metadaten-fehlen" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="häufige-stolperfallen-wenn-metadaten-fehlen"><span class="header-section-number">4</span> Häufige Stolperfallen, wenn Metadaten fehlen</h2>
+<p>Beim Arbeiten mit Daten treten in der Praxis oft typische Probleme auf, die ihre Verwendung für andere erschweren:</p>
+<ul>
+<li><strong>Unvollständige Angaben</strong>: Wichtige Informationen wie Erstellungsdatum oder Autor:in fehlen.</li>
+<li><strong>Inkonsistente Begriffe</strong>: Dasselbe Objekt wird mit unterschiedlichen Schlagwörtern beschrieben, was die Suche erschwert.</li>
+<li><strong>Fehlende Angaben zu Nutzungsrechten</strong>: Ohne klare Hinweise zu Lizenzen ist eine Nachnutzung unsicher oder unmöglich.</li>
+<li><strong>Nicht standardisierte Formate</strong>: Eigene, individuelle Kategorien erschweren die Zusammenarbeit mit anderen.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Verwenden Sie, wenn möglich, standardisierte Metadaten-Schemata (z. B. <em>Dublin Core</em>) und dokumentieren Sie Ihre Entscheidungen nachvollziehbar.</p>
+</div>
+</div>
+</section>
+<section id="ausblick" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="ausblick"><span class="header-section-number">5</span> Ausblick</h2>
+<p>Es gibt zahlreiche etablierte Standards und Werkzeuge, die den Umgang mit Metadaten erleichtern:</p>
+<ul>
+<li><a href="https://www.dublincore.org/"><strong>Dublin Core</strong></a>: Ein einfaches, weit verbreitetes Schema zur Beschreibung elektronischer und physischer Ressourcen wie Webseiten, Bilder und Videos mit 15 Metadatenelementen.</li>
+<li><a href="https://www.landesarchaeologien.de/kommissionen/archaeologie-und-informationssysteme/projekte-8"><strong>ADeX</strong></a>: Bundesweiter Standard für den Datenaustausch zwischen Archäologischen Landesämtern und mit anderen Fachinstitutionen.</li>
+<li><a href="https://docs.nfdi4culture.de/lido-schulung/was-ist-lido"><strong>LIDO</strong></a>: Ein XML-Schema zum Austausch von Metadaten zu Museums- und Sammlungsobjekten.</li>
+<li><a href="https://cidoc-crm.org/"><strong>CIDOC CRM</strong></a>: Eine komplexe Onthologie, die insbesondere in den Kultur- und Geschichtswissenschaften Anwendung findet.</li>
+<li><strong>Repositorien</strong> wie <a href="https://zenodo.org/"><em>Zenodo</em></a>, <a href="https://www.propylaeum.de/publizieren/propylaeum-dok"><em>Propylaeum-Dok</em></a> oder <a href="https://ianus-fdz.de/"><em>IANUS</em></a> verlangen strukturierte Metadaten, um Daten auffindbar und zitierbar zu machen.</li>
+</ul>
+<p>Für Ihre eigenen Projekte empfiehlt es sich, sich frühzeitig mit passenden Standards vertraut zu machen.</p>
+</section>
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="weiterführende-quellen-und-informationen" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Weiterführende Quellen und Informationen</h2><div class="quarto-appendix-contents">
+
+<p>Um das hier erlernte Wissen zu vertiefen, bietet sich eine <a href="https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-uebung-metadatentypen">Übung zu den verschiedenen Metadatentypen</a> an, die ebenfalls als NFDI4Objects-Baustein zur Verfügung steht. Zusätzlich finden Sie unter den NFDI4Objects-OER-Bausteinen außerdem Übungen zu <a href="https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-normdaten">Normdaten</a> und <a href="https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-pids">persistenten Identifikatoren</a>, die eng mit dem Thema Metadaten zusammenhängen.</p>
+<p>Konkrete Beispiele für die Anwendung von Metadaten finden Sie auch in anderen N4O-OER-Bausteinen z.B. zu <a href="https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-skript-bildmetadaten-fuer-rastergrafiken">Bilddaten</a> oder <a href="https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten">Tabellendaten</a>.</p>
+<p>Im World Wide Web gibt es eine Fülle an Informationen zu Metadaten und damit verbundenen Themen. Exemplarisch seien hier genannt:</p>
+<ul>
+<li><p><strong>IANUS</strong>: In den FDM-Empfehlungen von IANUS, insbesondere den Unterkapiteln des Abschnitts zu <a href="https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/index">Dokumentation</a> werden die Themen Metadaten, Strukturierung von Metadaten, Kontrollierte Vokabulare, Thesauri und Normdaten, Speicherung von Metadaten und Metadaten in der Anwendung ausführlich behandelt mit Blick auf Archäologie und Altertumswissenschaften.</p></li>
+<li><p><strong>Forschungsdaten.info</strong>: insbesondere die Abschnitte zu <a href="https://forschungsdaten.info/themen/beschreiben-und-dokumentieren/metadaten-und-metadatenstandards/">Metadaten und Metadatenstandards</a>, zu den <a href="https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/">FAIR-Prinzipien</a> und zu <a href="https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/persistente-identifikatoren/">Persistent Identifiers</a>. Außerdem lohnt ein Blick auf die Hinweise und Empfehlungen für den <a href="https://forschungsdaten.info/wissenschaftsbereiche/archaeologie/">Wissenschaftsbereich Archäologie</a></p></li>
+<li><p>Die <a href="https://docs.nfdi4culture.de/ta2-fair-handreichung">Handreichung für ein FAIRes Management kulturwissenschaftlicher Forschungsdaten von <strong>NFDI4Culture</strong></a> behandelt die Themen FAIR-Prinzipien, Metadatenstandards, Vokabulare, Normdaten und Anwendungsontologien insbesondere für Kulturwissenschaften und enthält darüber hinaus ausführliche Linksammlungen.</p></li>
+</ul>
+</div></section><section id="nachnutzen" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Nachnutzen</h2><div class="quarto-appendix-contents">
+
+<p>Alle sind herzlich eingeladen, diesen Baustein und die zugehörige Copyleft-Lizenz zu nutzen, um ihr Wissen und Expertise in die Verbesserung und Aktualisierung einzubringen. Alle können die Inhalte erweitern oder überarbeiten, zum Beispiel um Anwendungsszenarien und Nutzungskontexte zu erweitern.</p>
+<p>Unser Wunsch ist ein lebendiges, stetig wachsendes Dokument, das sich durch die Beiträge vieler verändert - im Einklang mit eines sich wandelnden Umfelds. Wir freuen uns im Falle einer Überarbeitung über eine kurze Notiz – das ist aber selbstverständlich keine Pflicht.</p>
+<!-- Verweise auf Website und Repository werden in _oer_metadata.yml global festgelegt. Wenn die OER nicht in einem git-Repository gehostet oder online bereitgestellt werden, können die folgenden zwei Zeilen gelöscht werden. -->
+<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://nfdi4objects.github.io/oer-template-skript/">Dieser Baustein als Website</a></p>
+<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://github.com/nfdi4objects/oer-template-skript">Quarto-Quellcode dieses Bausteins</a></p>
+<hr>
+<p><span class="emoji" data-emoji="link">🔗</span> Dieses Skript nutzt das <a href="https://github.com/nfdi4objects/oer-template-skript">OER-Skript-Template von NFDI4Objects</a></p>
+</div></section><section id="disclaimer-einsatz-von-llm" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Disclaimer: Einsatz von LLM</h2><div class="quarto-appendix-contents">
+
+<p>Bei der Erarbeitung dieses OER-Bausteins wurde für einzelne zielgruppengerechte Formulierungshilfen ChatGPT 5.0 genutzt.</p>
+
+
+<!-- -->
+
+
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliographie</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-petersen2023" class="csl-entry" role="listitem">
+Petersen, B., Altemeier, F., Boße, S., Dalby, M., Düvel, N., Engelhardt, C., Fichtner, M., Hastik, C., Haugwitz, J.-M., Jacob, J., Koch, K., Kuntz, A., Manske, A., Mühlichen, A., Murcia Serra, J., Ortmeyer, J., Richter, M., Schranzhofer, H., Slowig, B., Trautwein-Bruns, U., Urbaum, D., Voigt, A., Werner, S., Wiljes, C., und Zollitsch, L. 2025 <em>Lernzielmatrix zum Themenbereich Forschungsdatenmanagement (FDM) (Version 3)</em>, Zenodo. <a href="https://doi.org/10.5281/zenodo.15025246">https://doi.org/10.5281/zenodo.15025246</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Fußnoten</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://doi.org/10.5281/zenodo.3923601">Deutsche Forschungsgemeinschaft, Leitlinien zur Sicherung guter wissenschaftlicher Praxis. Kodex (Version 3, 27. Januar 2025)</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Die FAIR-Prinzipien wurden 2016 von der <a href="https://force11.org/info/the-fair-data-principles/">FORCE 11-Community</a> veröffentlicht. Anschließend wurden sie zunächst in die <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf">Förderrichtlinien des EU-Förderprogramms Horizon 2020</a> und danach in den <a href="https://zenodo.org/records/3923602">Kodex „Leitlinien zur Sicherung guter wissenschaftlicher Praxis“ der DFG</a> aufgenommen. Damit sind sie aus der Wissenschaftslandschaft nicht mehr wegzudenken und Teil eines jeden wissenschaftlichen Projekts. <a href="https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/">forschungsdaten.inf: FAIReDaten</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/dokumentation-der-metadaten">IANUS, FDM-Empfehlungen - Dokumentation mit Metadaten (CC BY-SA 4.0)</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Lizenz</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Urheber:innen</h2><div class="quarto-appendix-contents"><div>Sandra Schröer-Spang, Kai-Christian Bruhn</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Zitation</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{bruhn2026,
+  author = {Bruhn, Kai-Christian and Schröer-Spang, Sandra},
+  publisher = {Hochschule Mainz},
+  title = {Einführung in Metadaten},
+  date = {2026},
+  url = {https://nfdi4objects.github.io/oer-template-skript/},
+  doi = {XXXXXXX.XXXXXXX},
+  langid = {de},
+  abstract = {In diesem Skript wird erklärt, was Metadaten sind, welche
+    Arten von Metadaten es gibt und warum es für jede Forschungsarbeit
+    relevant ist, Dateien, Datensätze und die Forschungsarbeit an sich
+    mit Metadaten zu versehen. Die Zielgruppe dieser Einheit sind
+    Studierende (BA und MA) und Promovierende in Fächern, die sich mit
+    dem materiellen Erbe der Menschheitsgeschichte beschäftigen. Die
+    fachspezifischen Beispieldaten sind an dieser Zielgruppe
+    orientiert.}
+}
+</code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Kurzzitat</div><div id="ref-bruhn2026" class="csl-entry quarto-appendix-citeas" role="listitem">
+Bruhn, K.-C. and Schröer-Spang, S. 2026 <span>‘Einführung in
+Metadaten’</span>, <em>Open Educational Resource</em>. <a href="https://doi.org/XXXXXXX.XXXXXXX">https://doi.org/XXXXXXX.XXXXXXX</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nfdi4objects\.github\.io\/oer-skript-metadaten\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Quellcode</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Einführung in Metadaten"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">subtitle:</span><span class="co"> "Untertitel des OER-Skripts"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">lang:</span><span class="co"> de</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">date:</span><span class="co"> 2025-09-16</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">date-format:</span><span class="co"> "DD.MM.YYYY"</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="an">date-modified:</span><span class="co"> last-modified</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="an">metadata-files:</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">  - _layout.yml</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">  - _autor_innen.yml</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">  - _oer_metadata.yml</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># Optional</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="an">bibliography:</span><span class="co"> bibliographie.bib</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="an">toc-expand:</span><span class="co"> true</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="an">toc-title:</span><span class="co"> |</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co">  ![](img/n4o_oer_hsm_titelgraphik.png)</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="an">toc-location:</span><span class="co"> right</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="an">number-sections:</span><span class="co"> true # Auf false setzen, wenn keine automatische Abschnittsnummerierung gewünscht</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="an">lightbox:</span><span class="co"> true</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="an">crossref:</span><span class="co"> </span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="co">  lof-title: "Liste der Abbildungen"</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="co"># Für CI-build in github</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="an">execute:</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="co">  freeze: auto</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co">---</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="fu">## Einleitung</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a></span>
+<span id="cb1-30"><a href="#cb1-30"></a>Metadaten sind Daten über Daten. Sie beschreiben einen Datensatz oder einzelne Teile davon, sodass sowohl **Menschen** als auch **Maschinen** ihn verstehen können. Dies ist insbesondere dann relevant, wenn man selbst oder andere die Daten (in anderen Kontexten) wiederverwenden möchten. Metadaten gehören damit zu den Grundlagen für wissenschaftliches Arbeiten.</span>
+<span id="cb1-31"><a href="#cb1-31"></a></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="fu">### Lernziele {.kolophon .unnumbered .unlisted}</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a></span>
+<span id="cb1-34"><a href="#cb1-34"></a>Die Zielgruppe dieser Einheit sind Studierende (BA und MA) und Promovierende in Fächern, die sich mit dem materiellen Erbe der Menschheitsgeschichte beschäftigen. Die fachspezifischen Beispieldaten sind an dieser Zielgruppe orientiert.</span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a>Die Lernenden werden zu folgenden Lernzielen nach @petersen2023 befähigt:</span>
+<span id="cb1-37"><a href="#cb1-37"></a></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="ss">-   </span>den Begriff *Metadaten* zu erläutern (LZ-ID 03_002_0626),</span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="ss">-   </span>die Relevanz von Metadaten zu erläutern (LZ-ID 03_002_0629),</span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="ss">-   </span>verschiedene Arten von Metadaten zu benennen (LZ-ID 03_002_0627),</span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="ss">-   </span>die FAIR-Prinzipien zu benennen (LZ-ID 01_007_0117).</span>
+<span id="cb1-42"><a href="#cb1-42"></a></span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="fu">### Vorwissen {.kolophon .unnumbered .unlisted}</span></span>
+<span id="cb1-44"><a href="#cb1-44"></a></span>
+<span id="cb1-45"><a href="#cb1-45"></a>Es wird kein spezielles Vorwissen vorausgesetzt.</span>
+<span id="cb1-46"><a href="#cb1-46"></a></span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="fu">## Was sind Metadaten und wofür brauche ich sie</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a></span>
+<span id="cb1-49"><a href="#cb1-49"></a>Metadaten beschreiben den Inhalt, die Entstehung und den Kontext von Daten. Sie ermöglichen es, Informationen zu finden, zu veröffentlichen und wiederzuverwenden. Sie helfen dabei, Forschungsergebnisse einzuordnen, transparent und nachvollziehbar zu machen.</span>
+<span id="cb1-50"><a href="#cb1-50"></a></span>
+<span id="cb1-51"><a href="#cb1-51"></a>Warum Metadaten essenziell sind für das Verstehen und Benutzen von Daten, lässt sich an folgenden Beispielen verdeutlichen:</span>
+<span id="cb1-52"><a href="#cb1-52"></a></span>
+<span id="cb1-53"><a href="#cb1-53"></a>::::: panel-tabset</span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="fu">## Bild</span></span>
+<span id="cb1-55"><a href="#cb1-55"></a></span>
+<span id="cb1-56"><a href="#cb1-56"></a>**Szenario 1:** Stellen Sie sich vor, Sie stoßen in alten Aufzeichnungen auf diesen Scan eines Grundrisses. Der Scan trägt noch den Namen, den der Scanner automatisch vergeben hatte, und Sie haben damals vergessen, sich Notizen zu dem Scan oder dem abgebildeten Objekt zu machen. Möglicherweise erinnern Sie sich noch daran, was der Plan zeigt, aber werden Sie sich noch daran erinnern, aus welcher Publikation er stammt, wer der/die Urheberin des Plans ist? Ohne diese Angaben können Sie den Scan nicht weiter verwenden.</span>
+<span id="cb1-57"><a href="#cb1-57"></a></span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="al">![LR4T200909111246](img/01_was-sind-metadaten_11th_century_Kasivisvesvara_temple_plan__Lakkundi_Karnataka.jpg)</span>{fig-alt="Plan des Kasivisvesvara-Tempels, Urheberin: Sarah Welch, Quelle Wikimedia (https://en.wikipedia.org/wiki/File:11th_century_Kasivisvesvara_temple_plan,\_Lakkundi_Karnataka.jpg) Lizenz: CC0"}</span>
+<span id="cb1-59"><a href="#cb1-59"></a></span>
+<span id="cb1-60"><a href="#cb1-60"></a>::: {.callout-warning icon="false" title="Bild-Metadaten" collapse="true"}</span>
+<span id="cb1-61"><a href="#cb1-61"></a>Mögliche Metadaten, die weitere Informationen geben können (Für eine Vertiefung in Metadaten für Rasterbilder siehe das <span class="co">[</span><span class="ot">NFDI4Objects-OER-Skript Bildmetadaten für Rastergrafiken</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-bildmetadaten-fuer-rastergrafiken)</span> und die gleichnamige <span class="co">[</span><span class="ot">NFDI4Objects-OER-Übung</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-bildmetadaten-fuer-rastergrafiken)</span>):</span>
+<span id="cb1-62"><a href="#cb1-62"></a></span>
+<span id="cb1-63"><a href="#cb1-63"></a>**Titel:** Plan Kasivisvesvara Temple</span>
+<span id="cb1-64"><a href="#cb1-64"></a></span>
+<span id="cb1-65"><a href="#cb1-65"></a>**Urheber:in:** Sarah Welch</span>
+<span id="cb1-66"><a href="#cb1-66"></a></span>
+<span id="cb1-67"><a href="#cb1-67"></a>**Erstellungsdatum:** 15 June 2021</span>
+<span id="cb1-68"><a href="#cb1-68"></a></span>
+<span id="cb1-69"><a href="#cb1-69"></a>**Quelle:** Wikimedia (https://en.wikipedia.org/wiki/File:11th_century_Kasivisvesvara_temple_plan,\_Lakkundi_Karnataka.jpg)</span>
+<span id="cb1-70"><a href="#cb1-70"></a></span>
+<span id="cb1-71"><a href="#cb1-71"></a>**Lizenz:** CC0</span>
+<span id="cb1-72"><a href="#cb1-72"></a></span>
+<span id="cb1-73"><a href="#cb1-73"></a>**Beschreibung:** The Kasivisvesvara temple has been restored and is found in the southern part of the village Lakkundi. It is a Hindu twin temple – one for Shiva and the other for Surya. In historic texts and some inscriptions, it is called the Kavatalesvara temple. The temple's architectural plan follows the square and circle principle found in historic Sanskrit texts. The relative scale and relative dimensions in this architectural drawing are close to the actual but neither exact nor complete. The plan illustrates the design and layout, but some intricate details or parts of the temple may not be shown. In cases where exact measurements were not feasible, the drawing uses best approximations and rounds the best measurements feasible. This drawing uses some of the measurements made and published by Mysore Archaeological Department before 1915.</span>
+<span id="cb1-74"><a href="#cb1-74"></a></span>
+<span id="cb1-75"><a href="#cb1-75"></a>**Format**: JPG</span>
+<span id="cb1-76"><a href="#cb1-76"></a>:::</span>
+<span id="cb1-77"><a href="#cb1-77"></a></span>
+<span id="cb1-78"><a href="#cb1-78"></a><span class="fu">## Tabelle</span></span>
+<span id="cb1-79"><a href="#cb1-79"></a></span>
+<span id="cb1-80"><a href="#cb1-80"></a>**Szenario 2**: Sie übernehmen ein Projekt, in dem schon Vorarbeiten geleistet wurden. In den Unterlagen finden Sie eine Tabelle, für die es keine Angaben zu Inhalt, Autor:innen oder eine Beschreibung der Abkürzungen gibt. Sie müssen entweder viel Zeit darauf verwenden, die fehlenden Informationen einzuholen, oder Sie werden die Daten nicht weiter verwenden können.</span>
+<span id="cb1-81"><a href="#cb1-81"></a></span>
+<span id="cb1-82"><a href="#cb1-82"></a><span class="al">![Tabelle Funde](img/02_Beipieltabelle.jpg)</span>{fig-alt="Screenshot einer Tabelle, Urheberin: Sandra Schröer-Spang, Lizenz: CC0"}</span>
+<span id="cb1-83"><a href="#cb1-83"></a></span>
+<span id="cb1-84"><a href="#cb1-84"></a>::: {.callout-warning icon="false" title="Tabellen-Metadaten" collapse="true"}</span>
+<span id="cb1-85"><a href="#cb1-85"></a>Mögliche Metadaten, die weitere Informationen geben können (für eine Vertiefung in Metadaten für Tabellendaten siehe auch das <span class="co">[</span><span class="ot">NFDI4Objects-OER-Skript Tabellendaten</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten)</span> und die <span class="co">[</span><span class="ot">NFDI4Objects-OER-Übung Metadatenmanipulation in Tabellenprogrammen</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-uebung-metadatenmanipulation-in-tabellenprogrammen)</span>):</span>
+<span id="cb1-86"><a href="#cb1-86"></a></span>
+<span id="cb1-87"><a href="#cb1-87"></a>**Titel**: Beispieltabelle Limesfunde</span>
+<span id="cb1-88"><a href="#cb1-88"></a></span>
+<span id="cb1-89"><a href="#cb1-89"></a>**Autorin**: Sandra Schröer-Spang</span>
+<span id="cb1-90"><a href="#cb1-90"></a></span>
+<span id="cb1-91"><a href="#cb1-91"></a>**Beschreibung**: Die Tabelle wurde als Beispiel für eine Tabelle ohne Metadaten erstellt. Sie enthält Funde aus baden-württembergischen Limesstandorten, die im Limesmuseum Aalen aufbewahrt werden. Die hier eingetragenen Informationen wurden exemplarisch aus der Webseite https://www.limesmuseum.de exzerptiert.</span>
+<span id="cb1-92"><a href="#cb1-92"></a></span>
+<span id="cb1-93"><a href="#cb1-93"></a>**Quelle**: <span class="ot">&lt;https://www.limesmuseum.de&gt;</span></span>
+<span id="cb1-94"><a href="#cb1-94"></a></span>
+<span id="cb1-95"><a href="#cb1-95"></a>**Variablen**:</span>
+<span id="cb1-96"><a href="#cb1-96"></a></span>
+<span id="cb1-97"><a href="#cb1-97"></a><span class="ss">-   </span>*ID* - Einzigartige numerische Kennung eines jeden Eintrags</span>
+<span id="cb1-98"><a href="#cb1-98"></a><span class="ss">-   </span>*BL* - Kürzel für das Bundesland, in dem der Fundort liegt (BW = Baden-Württemberg)</span>
+<span id="cb1-99"><a href="#cb1-99"></a><span class="ss">-   </span>*LK* - Kürzel für den Landkreis, in dem der Fundort liegt. Als Kürzel wurde das KFZ-Kennzeichen der Gebietskörperschaft gewählt (AA = Ostalbkreis, MOS = Neckar-Odenwald-Kreis, KÜN = Hohenlohekreis)</span>
+<span id="cb1-100"><a href="#cb1-100"></a><span class="ss">-   </span>*FO* - Fundort</span>
+<span id="cb1-101"><a href="#cb1-101"></a><span class="ss">-   </span>*Inv-Nr.* - Inventarnummer des Archäologischen Landesmuseums (ALM) Rastatt</span>
+<span id="cb1-102"><a href="#cb1-102"></a><span class="ss">-   </span>*Fundtyp* - Übergeordnete Bezeichnung für die Art des Objektes</span>
+<span id="cb1-103"><a href="#cb1-103"></a><span class="ss">-   </span>*Dat.* - Datierung auf Epochenebene (RKZ = Römische Kaiserzeit, FMA = Frühmittelalter)</span>
+<span id="cb1-104"><a href="#cb1-104"></a><span class="ss">-   </span>*Mat.* - Materialart (Kn = Knochen, Bz = Bronze, Ke = Keramik, Z = Ziegel)</span>
+<span id="cb1-105"><a href="#cb1-105"></a><span class="ss">-   </span>*Standort* - Standort, an dem das Objekt zum Zeitpunkt des Eintrags aufbewahrt wurde</span>
+<span id="cb1-106"><a href="#cb1-106"></a></span>
+<span id="cb1-107"><a href="#cb1-107"></a>**Erstellungsdatum**: 15.09.2025</span>
+<span id="cb1-108"><a href="#cb1-108"></a>:::</span>
+<span id="cb1-109"><a href="#cb1-109"></a></span>
+<span id="cb1-110"><a href="#cb1-110"></a><span class="fu">## Dateistruktur</span></span>
+<span id="cb1-111"><a href="#cb1-111"></a></span>
+<span id="cb1-112"><a href="#cb1-112"></a>**Szenario 3:** Sie stoßen in Ihrer Forschung auf eine ältere Datensammlung. Die Dateien heißen „Manuskript neu“ oder „Aufsatz“. Angaben zu Autor:in, Ort oder Methode fehlen. Die Daten sind damit praktisch unbrauchbar.</span>
+<span id="cb1-113"><a href="#cb1-113"></a></span>
+<span id="cb1-114"><a href="#cb1-114"></a><span class="al">![Beispiel für eine Chaotische Dateistruktur](img/Beispielbild_Dateistruktur.jpg)</span>{fig-alt="Screenshot, Urheberin: Sandra Schröer-Spang, Lizenz: CC0"}</span>
+<span id="cb1-115"><a href="#cb1-115"></a></span>
+<span id="cb1-116"><a href="#cb1-116"></a>Durch eine **eindeutige Dateibenennung**, eine **sinnvolle Ordnerstruktur** und eine **README-Datei**, in der die Ordnerstruktur und das Projekt beschrieben sind, können die Daten von fremden Personen verstanden und weiter genutzt werden. Zu Dateistrukturen siehe auch das <span class="co">[</span><span class="ot">NFDI4Objects-OER-Skript Dateiorganisation</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-dateiorganisation)</span></span>
+<span id="cb1-117"><a href="#cb1-117"></a>:::::</span>
+<span id="cb1-118"><a href="#cb1-118"></a></span>
+<span id="cb1-119"><a href="#cb1-119"></a>Mit gut gepflegten Metadaten wäre in allen drei Beispielen sofort klar:</span>
+<span id="cb1-120"><a href="#cb1-120"></a></span>
+<span id="cb1-121"><a href="#cb1-121"></a><span class="ss">-   </span>**Wer** hat die Daten erhoben?</span>
+<span id="cb1-122"><a href="#cb1-122"></a><span class="ss">-   </span>**Wann**, in **welchem Kontext** und unter **welchen Bedingungen** wurden die Daten erhoben?</span>
+<span id="cb1-123"><a href="#cb1-123"></a><span class="ss">-   </span>**Welche Lizenz** erlaubt mir die Nachnutzung?</span>
+<span id="cb1-124"><a href="#cb1-124"></a></span>
+<span id="cb1-125"><a href="#cb1-125"></a>Dieses Beispiel zeigt: Metadaten sparen nicht nur anderen Zeit, sondern auch Ihnen selbst – spätestens, wenn Sie Ihre eigenen Daten nach längerer Zeit wiederverwenden möchten.</span>
+<span id="cb1-126"><a href="#cb1-126"></a></span>
+<span id="cb1-127"><a href="#cb1-127"></a>Die eigenen Forschungsdaten mit Metadaten anzureichern, gehört daher zur **guten wissenschaftlichen Praxis**[^2] und sie spielen eine zentrale Rolle bei der Umsetzung der **FAIR-Prinzipien**<span class="ot">[^3]</span>.</span>
+<span id="cb1-128"><a href="#cb1-128"></a></span>
+<span id="cb1-129"><a href="#cb1-129"></a><span class="ot">[^2]: </span><span class="co">[</span><span class="ot">Deutsche Forschungsgemeinschaft, Leitlinien zur Sicherung guter wissenschaftlicher Praxis. Kodex (Version 3, 27. Januar 2025)</span><span class="co">](https://doi.org/10.5281/zenodo.3923601)</span></span>
+<span id="cb1-130"><a href="#cb1-130"></a></span>
+<span id="cb1-131"><a href="#cb1-131"></a><span class="ot">[^3]: </span>Die FAIR-Prinzipien wurden 2016 von der <span class="co">[</span><span class="ot">FORCE 11-Community</span><span class="co">](https://force11.org/info/the-fair-data-principles/)</span> veröffentlicht. Anschließend wurden sie zunächst in die <span class="co">[</span><span class="ot">Förderrichtlinien des EU-Förderprogramms Horizon 2020</span><span class="co">](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf)</span> und danach in den <span class="co">[</span><span class="ot">Kodex „Leitlinien zur Sicherung guter wissenschaftlicher Praxis“ der DFG</span><span class="co">](https://zenodo.org/records/3923602)</span> aufgenommen. Damit sind sie aus der Wissenschaftslandschaft nicht mehr wegzudenken und Teil eines jeden wissenschaftlichen Projekts. <span class="co">[</span><span class="ot">forschungsdaten.inf: FAIReDaten</span><span class="co">](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/)</span></span>
+<span id="cb1-132"><a href="#cb1-132"></a></span>
+<span id="cb1-133"><a href="#cb1-133"></a>::: {.callout-note title="Die FAIR-Prinzipien auf einen Blick"}</span>
+<span id="cb1-134"><a href="#cb1-134"></a>Die sogenannten **FAIR-Prinzipien** bilden eine international anerkannte Leitlinie für den Umgang mit Forschungsdaten. Sie stehen für:</span>
+<span id="cb1-135"><a href="#cb1-135"></a></span>
+<span id="cb1-136"><a href="#cb1-136"></a><span class="ss">-   </span>**F**indable: Daten sollen **auffindbar** sein.</span>
+<span id="cb1-137"><a href="#cb1-137"></a><span class="ss">-   </span>**A**ccessible: Daten sollen **zugänglich** sein.</span>
+<span id="cb1-138"><a href="#cb1-138"></a><span class="ss">-   </span>**I**nteroperable: Daten sollen in unterschiedlichen Kontexten und Systemen **verarbeitet** werden können.</span>
+<span id="cb1-139"><a href="#cb1-139"></a><span class="ss">-   </span>**R**eusable: Daten sollen **wiederverwendbar** sein.</span>
+<span id="cb1-140"><a href="#cb1-140"></a></span>
+<span id="cb1-141"><a href="#cb1-141"></a>Gut dokumentierte Metadaten sind eine zentrale Voraussetzung, um Daten gemäß diesen Prinzipien nutzbar zu machen.</span>
+<span id="cb1-142"><a href="#cb1-142"></a></span>
+<span id="cb1-143"><a href="#cb1-143"></a>Mehr zu den FAIR-Prinzipien finden Sie beispielsweise bei <span class="co">[</span><span class="ot">GoFAIR</span><span class="co">](https://www.go-fair.org/fair-principles/)</span>, <span class="co">[</span><span class="ot">forschungsdaten.info</span><span class="co">](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/)</span> oder in einer <span class="co">[</span><span class="ot">Handreichung zu FAIRem Datenmanagement von NFDI4Culture</span><span class="co">](https://docs.nfdi4culture.de/ta2-fair-handreichung)</span></span>
+<span id="cb1-144"><a href="#cb1-144"></a>:::</span>
+<span id="cb1-145"><a href="#cb1-145"></a></span>
+<span id="cb1-146"><a href="#cb1-146"></a><span class="fu">## Welche Arten von Metadaten gibt es</span></span>
+<span id="cb1-147"><a href="#cb1-147"></a></span>
+<span id="cb1-148"><a href="#cb1-148"></a>Wie am obigen Beispiel deutlich wurde, gibt es unterschiedliche Arten von Metadaten, je nach Informationsbedürfnis und Anwendungskontext. Egal ob sie ein Forschungsvorhaben in seiner Gesamtheit oder den Inhalt eines einzelnen Dokuments beschreiben, können sie sich auf folgende Aspekte beziehen (Auflistung nach IANUS<span class="ot">[^4]</span>):</span>
+<span id="cb1-149"><a href="#cb1-149"></a></span>
+<span id="cb1-150"><a href="#cb1-150"></a><span class="ot">[^4]: </span><span class="co">[</span><span class="ot">IANUS, FDM-Empfehlungen - Dokumentation mit Metadaten (CC BY-SA 4.0)</span><span class="co">](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/dokumentation-der-metadaten)</span></span>
+<span id="cb1-151"><a href="#cb1-151"></a></span>
+<span id="cb1-152"><a href="#cb1-152"></a><span class="fu">### Typen von Metadaten</span></span>
+<span id="cb1-153"><a href="#cb1-153"></a></span>
+<span id="cb1-154"><a href="#cb1-154"></a>::: panel-tabset</span>
+<span id="cb1-155"><a href="#cb1-155"></a><span class="fu">## Deskriptiv</span></span>
+<span id="cb1-156"><a href="#cb1-156"></a><span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-book-half"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> **Fachlich und inhaltlich nähere Beschreibung** des Projekts, eines Objekts oder einer Methode:</span>
+<span id="cb1-157"><a href="#cb1-157"></a></span>
+<span id="cb1-158"><a href="#cb1-158"></a><span class="ss">-   </span>Titel eines Textes</span>
+<span id="cb1-159"><a href="#cb1-159"></a><span class="ss">-   </span>Kurzbeschreibung eines Fotos</span>
+<span id="cb1-160"><a href="#cb1-160"></a><span class="ss">-   </span>Schlagwörter</span>
+<span id="cb1-161"><a href="#cb1-161"></a><span class="ss">-   </span>Autor:innen eines Textes</span>
+<span id="cb1-162"><a href="#cb1-162"></a></span>
+<span id="cb1-163"><a href="#cb1-163"></a><span class="fu">## Strukturell</span></span>
+<span id="cb1-164"><a href="#cb1-164"></a></span>
+<span id="cb1-165"><a href="#cb1-165"></a><span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-bezier2"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Beschreiben den **Zusammenhang** zwischen verschiedenen Teilen von Daten:</span>
+<span id="cb1-166"><a href="#cb1-166"></a></span>
+<span id="cb1-167"><a href="#cb1-167"></a><span class="ss">-   </span>Angabe von referenzierten Dateien in Zeichnungen</span>
+<span id="cb1-168"><a href="#cb1-168"></a><span class="ss">-   </span>Angabe der Reihenfolge von Fotos oder zusammengehörigen Dateien</span>
+<span id="cb1-169"><a href="#cb1-169"></a><span class="ss">-   </span>Beschreibung einer Ordnerstruktur</span>
+<span id="cb1-170"><a href="#cb1-170"></a></span>
+<span id="cb1-171"><a href="#cb1-171"></a><span class="fu">## Administrativ</span></span>
+<span id="cb1-172"><a href="#cb1-172"></a></span>
+<span id="cb1-173"><a href="#cb1-173"></a><span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-badge-cc-fill"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> **Rechtliche Metadaten** benennen Rechteinhaber, Lizenzbedingungen und Zugangsregeln:</span>
+<span id="cb1-174"><a href="#cb1-174"></a></span>
+<span id="cb1-175"><a href="#cb1-175"></a><span class="ss">-   </span>Quellenangaben</span>
+<span id="cb1-176"><a href="#cb1-176"></a><span class="ss">-   </span>Angabe von Lizenzen, unter der Daten genutzt werden können</span>
+<span id="cb1-177"><a href="#cb1-177"></a></span>
+<span id="cb1-178"><a href="#cb1-178"></a><span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-clock-history"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> **Erhaltungsbezogene Metadaten** (auch Provinzienz-Metadaten genannt) lassen die Geschichte eines digitalen Objektes, also die vorhergehenden und gegenwärtigen Zustände, nachvollziehen und beschreiben Erhaltungsmaßnahmen:</span>
+<span id="cb1-179"><a href="#cb1-179"></a></span>
+<span id="cb1-180"><a href="#cb1-180"></a><span class="ss">-   </span>Herkunft einer Karte</span>
+<span id="cb1-181"><a href="#cb1-181"></a><span class="ss">-   </span>Dateiversion und Angabe von Änderungen an der Ursprungsversion</span>
+<span id="cb1-182"><a href="#cb1-182"></a><span class="ss">-   </span>Konvertierungsmaßnahmen</span>
+<span id="cb1-183"><a href="#cb1-183"></a><span class="ss">-   </span>Verwendete Software, Methoden und Geräte</span>
+<span id="cb1-184"><a href="#cb1-184"></a><span class="ss">-   </span>Bearbeitungsschritte</span>
+<span id="cb1-185"><a href="#cb1-185"></a></span>
+<span id="cb1-186"><a href="#cb1-186"></a><span class="fu">## Technisch</span></span>
+<span id="cb1-187"><a href="#cb1-187"></a></span>
+<span id="cb1-188"><a href="#cb1-188"></a><span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-database-fill-gear"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span> Liefern Informationen zu **Software, Hardware und Dateiformaten**:</span>
+<span id="cb1-189"><a href="#cb1-189"></a></span>
+<span id="cb1-190"><a href="#cb1-190"></a><span class="ss">-   </span>Dateiformat eines Bildes</span>
+<span id="cb1-191"><a href="#cb1-191"></a><span class="ss">-   </span>Zeichenkodierung eines Textes</span>
+<span id="cb1-192"><a href="#cb1-192"></a><span class="ss">-   </span>Technische Parameter eines Messgerätes</span>
+<span id="cb1-193"><a href="#cb1-193"></a>:::</span>
+<span id="cb1-194"><a href="#cb1-194"></a></span>
+<span id="cb1-195"><a href="#cb1-195"></a>Die einzelnen Kategorien können sich überschneiden und kombiniert auftreten.</span>
+<span id="cb1-196"><a href="#cb1-196"></a></span>
+<span id="cb1-197"><a href="#cb1-197"></a>::: {.callout-note collapse="true" title="Andere Unterscheidung von Metadaten bei forschungsdaten.info"}</span>
+<span id="cb1-198"><a href="#cb1-198"></a>Eine etwas andere, jedoch ähnliche Unterscheidung von Metadaten, findet sich bei <span class="co">[</span><span class="ot">forschungsdaten.info</span><span class="co">](https://forschungsdaten.info/themen/beschreiben-und-dokumentieren/metadaten-und-metadatenstandards/)</span>:</span>
+<span id="cb1-199"><a href="#cb1-199"></a></span>
+<span id="cb1-200"><a href="#cb1-200"></a><span class="at">&gt; -   **Bibliografische Metadaten** wie Titel, Autoren, Beschreibung oder Keywords ermöglichen die Zitation von Daten und Code und helfen bei der Auffindbarkeit und thematischen Eingrenzung.</span></span>
+<span id="cb1-201"><a href="#cb1-201"></a><span class="at">&gt;</span></span>
+<span id="cb1-202"><a href="#cb1-202"></a><span class="at">&gt; -   **Administrative Metadaten** zu Dateitypen, Standorten, Zugriffsrechten und Lizenzen helfen bei der Verwaltung und langfristigen Erhaltung der Daten.</span></span>
+<span id="cb1-203"><a href="#cb1-203"></a><span class="at">&gt;</span></span>
+<span id="cb1-204"><a href="#cb1-204"></a><span class="at">&gt; -   **Prozessmetadaten** beschreiben die Schritte und Aktionen mit ihren verwendeten Methoden und Hilfsmitteln, die zur Entstehung und Verarbeitung der Daten angewendet wurden.</span></span>
+<span id="cb1-205"><a href="#cb1-205"></a><span class="at">&gt;</span></span>
+<span id="cb1-206"><a href="#cb1-206"></a><span class="at">&gt; -   **Inhaltsbeschreibende** bzw. **deskriptive Metadaten** können je nach Disziplin sehr unterschiedlich aufgebaut sein und geben zusätzliche Informationen zu Inhalt und Entstehung der Daten.</span></span>
+<span id="cb1-207"><a href="#cb1-207"></a><span class="at">:::</span></span>
+<span id="cb1-208"><a href="#cb1-208"></a></span>
+<span id="cb1-209"><a href="#cb1-209"></a><span class="fu">### Metadaten auf unterschiedlichen Hierarchiebenen</span></span>
+<span id="cb1-210"><a href="#cb1-210"></a></span>
+<span id="cb1-211"><a href="#cb1-211"></a>Metadaten kommen außerdem auf **jeder Ebene eines Projektes oder Datensatzes** zur Anwendung. Sie können sich also beziehen auf:</span>
+<span id="cb1-212"><a href="#cb1-212"></a></span>
+<span id="cb1-213"><a href="#cb1-213"></a><span class="pp">|</span> Hierarchie-Ebene <span class="pp">|</span> Beispiel <span class="pp">|</span></span>
+<span id="cb1-214"><a href="#cb1-214"></a><span class="pp">|------------------------------------|------------------------------------|</span></span>
+<span id="cb1-215"><a href="#cb1-215"></a><span class="pp">|</span> <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-folder"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>Datensammlung <span class="pp">|</span> Der gesamte Datenbestand eines Projektes <span class="pp">|</span></span>
+<span id="cb1-216"><a href="#cb1-216"></a><span class="pp">|</span> <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-file-earmark-post"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>Datei <span class="pp">|</span> Ein Grabungsfoto oder das Manuskript zu einem Aufsatz <span class="pp">|</span></span>
+<span id="cb1-217"><a href="#cb1-217"></a><span class="pp">|</span> <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-list-check"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>Information <span class="pp">|</span> Ein Datensatz in einer Datenbank oder die Auflösung von Abkürzungen innerhalb einer Tabelle <span class="pp">|</span></span>
+<span id="cb1-218"><a href="#cb1-218"></a></span>
+<span id="cb1-219"><a href="#cb1-219"></a><span class="fu">### Metadaten für Daten, Methoden und Prozesse</span></span>
+<span id="cb1-220"><a href="#cb1-220"></a></span>
+<span id="cb1-221"><a href="#cb1-221"></a>Weiterhin können Metadaten nicht nur Daten selbst sondern auch **angewandte Prozesse und Methoden zur Generierung der Daten** beschreiben. Dadurch wird der Entstehungsprozess von Dateien und Dateikonvoluten verständlicher und die Nutzenden bekommen Hinweise für den weiteren Umgang mit den Daten.</span>
+<span id="cb1-222"><a href="#cb1-222"></a></span>
+<span id="cb1-223"><a href="#cb1-223"></a>In den IANUS-IT-Empfehlungen werden im Abschnitt <span class="co">[</span><span class="ot">Metadaten in der Anwendung</span><span class="co">](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/metadaten-in-der-anwendung/)</span> daher Metadaten in drei Kategorien unterschieden:</span>
+<span id="cb1-224"><a href="#cb1-224"></a></span>
+<span id="cb1-225"><a href="#cb1-225"></a><span class="pp">|</span> Metadaten-Kategorie <span class="pp">|</span> Beschreibung <span class="pp">|</span></span>
+<span id="cb1-226"><a href="#cb1-226"></a><span class="pp">|------------------------------------|------------------------------------|</span></span>
+<span id="cb1-227"><a href="#cb1-227"></a><span class="pp">|</span> <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-archive"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>**Projektbezogene Metadaten** <span class="pp">|</span> Dokumentieren den gesamten Datenbestand eines Projektes <span class="pp">|</span></span>
+<span id="cb1-228"><a href="#cb1-228"></a><span class="pp">|</span> <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-file-earmark-text"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>**Dateibezogene Metadaten** <span class="pp">|</span> Dokumentieren einzelne Dateien <span class="pp">|</span></span>
+<span id="cb1-229"><a href="#cb1-229"></a><span class="pp">|</span> <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">"bi bi-sliders2-vertical"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color:#000; margin-right:6px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span>**Methodenbezogene Metadaten** <span class="pp">|</span> Dokumentieren angewandte Prozesse und Methoden <span class="pp">|</span></span>
+<span id="cb1-230"><a href="#cb1-230"></a></span>
+<span id="cb1-231"><a href="#cb1-231"></a><span class="fu">## Häufige Stolperfallen, wenn Metadaten fehlen</span></span>
+<span id="cb1-232"><a href="#cb1-232"></a></span>
+<span id="cb1-233"><a href="#cb1-233"></a>Beim Arbeiten mit Daten treten in der Praxis oft typische Probleme auf, die ihre Verwendung für andere erschweren:</span>
+<span id="cb1-234"><a href="#cb1-234"></a></span>
+<span id="cb1-235"><a href="#cb1-235"></a><span class="ss">-   </span>**Unvollständige Angaben**: Wichtige Informationen wie Erstellungsdatum oder Autor:in fehlen.</span>
+<span id="cb1-236"><a href="#cb1-236"></a><span class="ss">-   </span>**Inkonsistente Begriffe**: Dasselbe Objekt wird mit unterschiedlichen Schlagwörtern beschrieben, was die Suche erschwert.</span>
+<span id="cb1-237"><a href="#cb1-237"></a><span class="ss">-   </span>**Fehlende Angaben zu Nutzungsrechten**: Ohne klare Hinweise zu Lizenzen ist eine Nachnutzung unsicher oder unmöglich.</span>
+<span id="cb1-238"><a href="#cb1-238"></a><span class="ss">-   </span>**Nicht standardisierte Formate**: Eigene, individuelle Kategorien erschweren die Zusammenarbeit mit anderen.</span>
+<span id="cb1-239"><a href="#cb1-239"></a></span>
+<span id="cb1-240"><a href="#cb1-240"></a>::: callout-tip</span>
+<span id="cb1-241"><a href="#cb1-241"></a>Verwenden Sie, wenn möglich, standardisierte Metadaten-Schemata (z. B. *Dublin Core*) und dokumentieren Sie Ihre Entscheidungen nachvollziehbar.</span>
+<span id="cb1-242"><a href="#cb1-242"></a>:::</span>
+<span id="cb1-243"><a href="#cb1-243"></a></span>
+<span id="cb1-244"><a href="#cb1-244"></a><span class="fu">## Ausblick</span></span>
+<span id="cb1-245"><a href="#cb1-245"></a></span>
+<span id="cb1-246"><a href="#cb1-246"></a>Es gibt zahlreiche etablierte Standards und Werkzeuge, die den Umgang mit Metadaten erleichtern:</span>
+<span id="cb1-247"><a href="#cb1-247"></a></span>
+<span id="cb1-248"><a href="#cb1-248"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">**Dublin Core**</span><span class="co">](https://www.dublincore.org/)</span>: Ein einfaches, weit verbreitetes Schema zur Beschreibung elektronischer und physischer Ressourcen wie Webseiten, Bilder und Videos mit 15 Metadatenelementen.</span>
+<span id="cb1-249"><a href="#cb1-249"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">**ADeX**</span><span class="co">](https://www.landesarchaeologien.de/kommissionen/archaeologie-und-informationssysteme/projekte-8)</span>: Bundesweiter Standard für den Datenaustausch zwischen Archäologischen Landesämtern und mit anderen Fachinstitutionen.</span>
+<span id="cb1-250"><a href="#cb1-250"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">**LIDO**</span><span class="co">](https://docs.nfdi4culture.de/lido-schulung/was-ist-lido)</span>: Ein XML-Schema zum Austausch von Metadaten zu Museums- und Sammlungsobjekten.</span>
+<span id="cb1-251"><a href="#cb1-251"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">**CIDOC CRM**</span><span class="co">](https://cidoc-crm.org/)</span>: Eine komplexe Onthologie, die insbesondere in den Kultur- und Geschichtswissenschaften Anwendung findet.</span>
+<span id="cb1-252"><a href="#cb1-252"></a><span class="ss">-   </span>**Repositorien** wie <span class="co">[</span><span class="ot">*Zenodo*</span><span class="co">](https://zenodo.org/)</span>, <span class="co">[</span><span class="ot">*Propylaeum-Dok*</span><span class="co">](https://www.propylaeum.de/publizieren/propylaeum-dok)</span> oder <span class="co">[</span><span class="ot">*IANUS*</span><span class="co">](https://ianus-fdz.de/)</span> verlangen strukturierte Metadaten, um Daten auffindbar und zitierbar zu machen.</span>
+<span id="cb1-253"><a href="#cb1-253"></a></span>
+<span id="cb1-254"><a href="#cb1-254"></a>Für Ihre eigenen Projekte empfiehlt es sich, sich frühzeitig mit passenden Standards vertraut zu machen.</span>
+<span id="cb1-255"><a href="#cb1-255"></a></span>
+<span id="cb1-256"><a href="#cb1-256"></a><span class="fu">## Weiterführende Quellen und Informationen {.appendix .unnumbered}</span></span>
+<span id="cb1-257"><a href="#cb1-257"></a></span>
+<span id="cb1-258"><a href="#cb1-258"></a>Um das hier erlernte Wissen zu vertiefen, bietet sich eine <span class="co">[</span><span class="ot">Übung zu den verschiedenen Metadatentypen</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-uebung-metadatentypen)</span> an, die ebenfalls als NFDI4Objects-Baustein zur Verfügung steht. Zusätzlich finden Sie unter den NFDI4Objects-OER-Bausteinen außerdem Übungen zu <span class="co">[</span><span class="ot">Normdaten</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-normdaten)</span> und <span class="co">[</span><span class="ot">persistenten Identifikatoren</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-pids)</span>, die eng mit dem Thema Metadaten zusammenhängen.</span>
+<span id="cb1-259"><a href="#cb1-259"></a></span>
+<span id="cb1-260"><a href="#cb1-260"></a>Konkrete Beispiele für die Anwendung von Metadaten finden Sie auch in anderen N4O-OER-Bausteinen z.B. zu <span class="co">[</span><span class="ot">Bilddaten</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-skript-bildmetadaten-fuer-rastergrafiken)</span> oder <span class="co">[</span><span class="ot">Tabellendaten</span><span class="co">](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten)</span>.</span>
+<span id="cb1-261"><a href="#cb1-261"></a></span>
+<span id="cb1-262"><a href="#cb1-262"></a>Im World Wide Web gibt es eine Fülle an Informationen zu Metadaten und damit verbundenen Themen. Exemplarisch seien hier genannt:</span>
+<span id="cb1-263"><a href="#cb1-263"></a></span>
+<span id="cb1-264"><a href="#cb1-264"></a><span class="ss">-   </span>**IANUS**: In den FDM-Empfehlungen von IANUS, insbesondere den Unterkapiteln des Abschnitts zu <span class="co">[</span><span class="ot">Dokumentation</span><span class="co">](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/index)</span> werden die Themen Metadaten, Strukturierung von Metadaten, Kontrollierte Vokabulare, Thesauri und Normdaten, Speicherung von Metadaten und Metadaten in der Anwendung ausführlich behandelt mit Blick auf Archäologie und Altertumswissenschaften.</span>
+<span id="cb1-265"><a href="#cb1-265"></a></span>
+<span id="cb1-266"><a href="#cb1-266"></a><span class="ss">-   </span>**Forschungsdaten.info**: insbesondere die Abschnitte zu <span class="co">[</span><span class="ot">Metadaten und Metadatenstandards</span><span class="co">](https://forschungsdaten.info/themen/beschreiben-und-dokumentieren/metadaten-und-metadatenstandards/)</span>, zu den <span class="co">[</span><span class="ot">FAIR-Prinzipien</span><span class="co">](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/)</span> und zu <span class="co">[</span><span class="ot">Persistent Identifiers</span><span class="co">](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/persistente-identifikatoren/)</span>. Außerdem lohnt ein Blick auf die Hinweise und Empfehlungen für den <span class="co">[</span><span class="ot">Wissenschaftsbereich Archäologie</span><span class="co">](https://forschungsdaten.info/wissenschaftsbereiche/archaeologie/)</span></span>
+<span id="cb1-267"><a href="#cb1-267"></a></span>
+<span id="cb1-268"><a href="#cb1-268"></a><span class="ss">-   </span>Die <span class="co">[</span><span class="ot">Handreichung für ein FAIRes Management kulturwissenschaftlicher Forschungsdaten von **NFDI4Culture**</span><span class="co">](https://docs.nfdi4culture.de/ta2-fair-handreichung)</span> behandelt die Themen FAIR-Prinzipien, Metadatenstandards, Vokabulare, Normdaten und Anwendungsontologien insbesondere für Kulturwissenschaften und enthält darüber hinaus ausführliche Linksammlungen.</span>
+<span id="cb1-269"><a href="#cb1-269"></a></span>
+<span id="cb1-270"><a href="#cb1-270"></a><span class="fu">## Nachnutzen {.appendix .unnumbered}</span></span>
+<span id="cb1-271"><a href="#cb1-271"></a></span>
+<span id="cb1-272"><a href="#cb1-272"></a>Alle sind herzlich eingeladen, diesen Baustein und die zugehörige Copyleft-Lizenz zu nutzen, um ihr Wissen und Expertise in die Verbesserung und Aktualisierung einzubringen. Alle können die Inhalte erweitern oder überarbeiten, zum Beispiel um Anwendungsszenarien und Nutzungskontexte zu erweitern.</span>
+<span id="cb1-273"><a href="#cb1-273"></a></span>
+<span id="cb1-274"><a href="#cb1-274"></a>Unser Wunsch ist ein lebendiges, stetig wachsendes Dokument, das sich durch die Beiträge vieler verändert - im Einklang mit eines sich wandelnden Umfelds. Wir freuen uns im Falle einer Überarbeitung über eine kurze Notiz – das ist aber selbstverständlich keine Pflicht.</span>
+<span id="cb1-275"><a href="#cb1-275"></a></span>
+<span id="cb1-276"><a href="#cb1-276"></a><span class="co">&lt;!-- Verweise auf Website und Repository werden in _oer_metadata.yml global festgelegt. Wenn die OER nicht in einem git-Repository gehostet oder online bereitgestellt werden, können die folgenden zwei Zeilen gelöscht werden. --&gt;</span></span>
+<span id="cb1-277"><a href="#cb1-277"></a></span>
+<span id="cb1-278"><a href="#cb1-278"></a><span class="sc">:link:</span> <span class="co">[</span><span class="ot">Dieser Baustein als Website</span><span class="co">]({{&lt; meta site-url &gt;}})</span> </span>
+<span id="cb1-279"><a href="#cb1-279"></a></span>
+<span id="cb1-280"><a href="#cb1-280"></a><span class="sc">:link:</span> <span class="co">[</span><span class="ot">Quarto-Quellcode dieses Bausteins</span><span class="co">]({{&lt; meta repo-url &gt;}})</span></span>
+<span id="cb1-281"><a href="#cb1-281"></a></span>
+<span id="cb1-282"><a href="#cb1-282"></a>---</span>
+<span id="cb1-283"><a href="#cb1-283"></a></span>
+<span id="cb1-284"><a href="#cb1-284"></a><span class="sc">:link:</span> Dieses Skript nutzt das <span class="co">[</span><span class="ot">OER-Skript-Template von NFDI4Objects</span><span class="co">]({{&lt; meta template-repo-url &gt;}})</span></span>
+<span id="cb1-285"><a href="#cb1-285"></a></span>
+<span id="cb1-286"><a href="#cb1-286"></a><span class="fu">## Disclaimer: Einsatz von LLM {.appendix .unnumbered}</span></span>
+<span id="cb1-287"><a href="#cb1-287"></a></span>
+<span id="cb1-288"><a href="#cb1-288"></a>Bei der Erarbeitung dieses OER-Bausteins wurde für einzelne zielgruppengerechte Formulierungshilfen ChatGPT 5.0 genutzt.</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
