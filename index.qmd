@@ -253,7 +253,7 @@ Für Ihre eigenen Projekte empfiehlt es sich, sich frühzeitig mit passenden Sta
 
 Um das hier erlernte Wissen zu vertiefen, bietet sich eine [Übung zu den verschiedenen Metadatentypen](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-uebung-metadatentypen) an, die ebenfalls als NFDI4Objects-Baustein zur Verfügung steht. Zusätzlich finden Sie unter den NFDI4Objects-OER-Bausteinen außerdem Übungen zu [Normdaten](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-normdaten) und [persistenten Identifikatoren](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-pids), die eng mit dem Thema Metadaten zusammenhängen.
 
-Konkrete Beispiele für die Anwendung von Metadaten finden Sie auch in anderen N4O-OER-Bausteinen z.B. zu [Bilddaten](https://gitlab.rlp.net/n4o/oer-bausteine/nfdi4objects-oer-skript-bildmetadaten-fuer-rastergrafiken) oder [Tabellendaten](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten).
+Konkrete Beispiele für die Anwendung von Metadaten finden Sie auch in anderen N4O-OER-Bausteinen z.B. zu [Bilddaten](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-bildmetadaten-fuer-rastergrafiken) oder [Tabellendaten](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-tabellendaten).
 
 Im World Wide Web gibt es eine Fülle an Informationen zu Metadaten und damit verbundenen Themen. Exemplarisch seien hier genannt:
 
