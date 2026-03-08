@@ -1,0 +1,24 @@
+cff-version: 0.0.1
+title: Quarto-Template für Übungen
+message: FAIRedelte Open Educational Resources (OER).
+type: template
+authors:
+  - given-names: Kai-Christian
+    family-names: Bruhn
+    email: kai-christian.bruhn@hs-mainz.de
+    affiliation: Hochschule Mainz
+    orcid: 'https://orcid.org/0000-0001-8322-1260'
+  - given-names: Sandra
+    family-names: Schröer-Spang
+    email: sandra.schroeer@hs-mainz.de
+    affiliation: Hochschule Mainz
+    orcid: 'https://orcid.org/0000-0002-3100-6240'
+url: 'https://nfdi4objects.github.io/oer-skript-metadaten/'
+abstract: |
+   Dieses Repository stellt ein Quarto-Template für Übungen als FAIRedelte Open Educational Resources (OER) bereit.Es eignet sich für textzentrierte Übungen, die konkrete Anwendungsbeispiele auf Grundlage von Skripten bieten. Die Materialien entstanden in dem von der DFG geförderten Projekt "NFDI4Objects - Forschungsdateninfrastruktur für die materiellen Hinterlassenschaften der Menschheitsgeschichte und wurden von der Task Area 6 an der Hochschule Mainz entwickelt.
+keywords:
+  - nfdi4objects
+  - quarto-template
+  - oer
+version: 1.0
+date-released: '2025-09-16'
